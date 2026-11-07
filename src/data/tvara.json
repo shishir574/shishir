@@ -1,0 +1,61 @@
+{
+  "name": "Tvara",
+  "github": "TryTvara",
+  "positioning": "AI and agentic SaaS products for HR, Sales, Finance and Operations.",
+  "description": "Tvara builds AI products and agentic workflows for business functions. The platform supports retrieval-augmented generation, fine-tuning, and deployment in private VPC, self-hosted or cloud environments.",
+  "founders": [
+    {
+      "id": "shishir-govinda",
+      "name": "Shishir Govinda M",
+      "role": "Co-founder & CTO",
+      "focus": "Product architecture, AI systems and engineering."
+    },
+    {
+      "id": "ruchika-sureka",
+      "name": "Ruchika Sureka",
+      "role": "Co-founder",
+      "focus": "Company and product."
+    },
+    {
+      "id": "shashidhar-hegde",
+      "name": "Shashidhar Hegde",
+      "role": "Co-founder",
+      "focus": "Company and product."
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "agentic-workflows",
+      "label": "Agentic workflows",
+      "description": "Task-oriented AI workflows across HR, Sales, Finance and Operations."
+    },
+    {
+      "id": "rag",
+      "label": "Retrieval-augmented generation",
+      "description": "Grounded answers over organisation-specific knowledge."
+    },
+    {
+      "id": "fine-tuning",
+      "label": "Fine-tuning",
+      "description": "Adapting models to domain language and business processes."
+    },
+    {
+      "id": "deployment",
+      "label": "Controlled deployment",
+      "description": "Private VPC, self-hosted and cloud options for enterprise constraints."
+    },
+    {
+      "id": "integrations",
+      "label": "System integrations",
+      "description": "Connecting AI workflows to existing operational software."
+    },
+    {
+      "id": "evaluation",
+      "label": "Evaluation",
+      "description": "Measuring model and workflow quality before and after deployment."
+    }
+  ],
+  "milestones": [],
+  "metrics": [],
+  "disclosureNote": "Commercial metrics, funding figures and client counts are withheld until they are verified and approved for publication."
+}

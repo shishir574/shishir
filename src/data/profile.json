@@ -1,0 +1,54 @@
+{
+  "profile": {
+    "name": "Shishir Govinda M",
+    "shortName": "Shishir Govinda",
+    "monogram": "SG",
+    "roles": ["Engineer", "Founder", "Researcher"],
+    "positioning": "Engineer. Founder. Researcher.",
+    "intro": "I build software systems, study intelligent ones, and take products from architecture to market. This archive is the working record: live code activity, technical notes, research, and the things I do away from a terminal.",
+    "currentFocus": [
+      "Tvara — AI and agentic SaaS",
+      "Applied AI systems",
+      "GPU-accelerated algorithms",
+      "Product architecture"
+    ],
+    "locationNote": "Location is read from the live GitHub record, never hardcoded.",
+    "externalLinks": [
+      { "label": "GitHub", "url": "https://github.com/shishir574" },
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/shishir-govinda-m" },
+      { "label": "LeetCode", "url": "https://leetcode.com/u/Shishir_Govinda_M/" },
+      { "label": "Tvara GitHub", "url": "https://github.com/TryTvara" }
+    ]
+  },
+  "identifiers": {
+    "github": "shishir574",
+    "githubOrganisation": "TryTvara",
+    "linkedin": "shishir-govinda-m",
+    "leetcode": "Shishir_Govinda_M",
+    "playstation": "ShishirG",
+    "repository": "shishir574.github.io"
+  },
+  "dimensions": [
+    {
+      "id": "builder",
+      "index": "01",
+      "title": "Builder",
+      "description": "Software engineering, AI/ML systems, public repositories and the code behind the products.",
+      "section": "github"
+    },
+    {
+      "id": "founder",
+      "index": "02",
+      "title": "Founder",
+      "description": "Tvara: company, product architecture and the path from prototype to deployment.",
+      "section": "tvara"
+    },
+    {
+      "id": "researcher",
+      "index": "03",
+      "title": "Researcher",
+      "description": "Publications, experiments, algorithms and applied AI research.",
+      "section": "research"
+    }
+  ]
+}

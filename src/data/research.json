@@ -1,0 +1,43 @@
+{
+  "records": [
+    {
+      "id": "rase",
+      "title": "RASE",
+      "shortTitle": "RASE",
+      "authors": [],
+      "venue": "IJIRT",
+      "publicationDate": "2025",
+      "abstract": "Abstract pending verification against the published IJIRT document.",
+      "summary": "RASE is recorded as an IJIRT 2025 publication. The full title, author list, identifiers and experimental results are intentionally withheld until they are verified against the paper itself.",
+      "topics": ["research", "systems"],
+      "verification": "pending",
+      "recordNote": "Verified metadata, PDF and benchmarks will be added from the published document."
+    },
+    {
+      "id": "cuda-pathfinding",
+      "title": "CUDA A* / Dijkstra",
+      "shortTitle": "CUDA PATHFINDING",
+      "authors": [],
+      "venue": "IJIRT",
+      "publicationDate": "2024-11",
+      "abstract": "Abstract pending verification against the published IJIRT document.",
+      "summary": "A research record for GPU-accelerated A* and Dijkstra pathfinding, published in IJIRT in November 2024. Exact title, author list and benchmark figures remain unverified.",
+      "topics": ["research", "cuda", "algorithms"],
+      "verification": "pending",
+      "recordNote": "Benchmarks and the final paper title must be taken from the publication, not reconstructed."
+    },
+    {
+      "id": "tvara-context-layer",
+      "title": "Tvara Context Layer",
+      "shortTitle": "CONTEXT LAYER",
+      "authors": [],
+      "venue": "Tvara research",
+      "publicationDate": "2026-06",
+      "abstract": "Research summary pending internal publication approval.",
+      "summary": "An applied research record covering Tvara's context layer. The architectural description will be published only after the material is cleared for public release.",
+      "topics": ["research", "rag", "agentic-ai"],
+      "verification": "pending",
+      "recordNote": "Awaiting public-release approval. No internal company information is exposed here."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "note": "Skill groups describe areas of work, not proficiency scores. GitHub language percentages are shown separately and do not measure expertise.",
+  "categories": [
+    {
+      "id": "ai-ml",
+      "label": "AI / ML",
+      "description": "Learning systems, language models and applied research.",
+      "items": [
+        "Machine learning",
+        "Deep learning",
+        "Transformers",
+        "Large language models",
+        "RAG",
+        "Fine-tuning",
+        "LoRA",
+        "Agentic AI",
+        "Vector databases",
+        "Model evaluation",
+        "Inference optimisation"
+      ]
+    },
+    {
+      "id": "engineering",
+      "label": "Engineering",
+      "description": "Fundamentals and systems architecture.",
+      "items": [
+        "Data structures",
+        "Algorithms",
+        "Operating systems",
+        "Computer networks",
+        "Databases",
+        "Distributed systems",
+        "Cloud infrastructure",
+        "DevOps",
+        "System design",
+        "Software architecture"
+      ]
+    },
+    {
+      "id": "gpu",
+      "label": "GPU / performance",
+      "description": "Parallel computing and performance-oriented engineering.",
+      "items": ["CUDA", "Parallel algorithms", "A* search", "Dijkstra", "Profiling", "Benchmarking"]
+    },
+    {
+      "id": "product",
+      "label": "Product",
+      "description": "Turning technical systems into shipped products.",
+      "items": [
+        "Product architecture",
+        "Technical leadership",
+        "API design",
+        "Enterprise deployment",
+        "Evaluation design"
+      ]
+    }
+  ]
+}

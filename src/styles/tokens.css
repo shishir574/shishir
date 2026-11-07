@@ -1,0 +1,55 @@
+:root {
+  /* Core surfaces */
+  --bg: #090909;
+  --surface: #121212;
+  --surface-elevated: #1a1a1a;
+  --border: #303030;
+  --border-strong: #4a4a4a;
+
+  /* Text */
+  --text: #e8e8e8;
+  --text-muted: #929292;
+  --text-dim: #646464;
+
+  /* Signal */
+  --red: #d62828;
+  --red-deep: #741b1b;
+  --red-soft: rgb(214 40 40 / 0.12);
+  --success: #74a88a;
+  --warning: #d1a65a;
+
+  /* Type */
+  --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "Cascadia Code", ui-monospace, monospace;
+
+  /* Scale */
+  --step--1: clamp(0.72rem, 0.7rem + 0.1vw, 0.78rem);
+  --step-0: clamp(0.95rem, 0.92rem + 0.15vw, 1.02rem);
+  --step-1: clamp(1.1rem, 1.02rem + 0.35vw, 1.28rem);
+  --step-2: clamp(1.4rem, 1.2rem + 0.9vw, 1.85rem);
+  --step-3: clamp(1.9rem, 1.4rem + 2.1vw, 3rem);
+  --step-4: clamp(2.6rem, 1.5rem + 5vw, 5.4rem);
+
+  /* Layout */
+  --rail-width: 15.5rem;
+  --page-max: 90rem;
+  --gutter: clamp(1rem, 0.5rem + 2.4vw, 4rem);
+  --section-space: clamp(4.5rem, 3rem + 7vw, 9rem);
+
+  /* Motion */
+  --ease-signal: cubic-bezier(0.2, 0.9, 0.2, 1);
+  --dur-fast: 140ms;
+  --dur-base: 280ms;
+  --dur-slow: 700ms;
+
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0.01ms;
+    --dur-base: 0.01ms;
+    --dur-slow: 0.01ms;
+  }
+}

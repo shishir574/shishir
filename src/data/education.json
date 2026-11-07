@@ -1,0 +1,21 @@
+{
+  "records": [
+    {
+      "id": "btech-cse",
+      "institution": "Sir M. Visvesvaraya Institute of Technology",
+      "degree": "B.Tech in Computer Science and Engineering",
+      "department": "Computer Science and Engineering",
+      "affiliation": "Visvesvaraya Technological University (VTU)",
+      "startDate": "2021",
+      "endDate": "2025",
+      "gpa": "9.1/10",
+      "verification": "pending",
+      "notes": [
+        "Institution, degree and GPA are recorded from the owner's résumé context.",
+        "Dates, GPA and coursework must be checked against the final approved academic record before publication."
+      ]
+    }
+  ],
+  "courses": [],
+  "achievements": []
+}
