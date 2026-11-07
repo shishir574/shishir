@@ -1,16 +1,191 @@
 {
   "identifier": "shishir-govinda-m",
   "profileUrl": "https://www.linkedin.com/in/shishir-govinda-m",
-  "headline": "Professional headline pending verification.",
-  "about": "LinkedIn content is locally maintained. Entries are added only after the owner confirms the public text; nothing is scraped.",
-  "lastUpdated": "2026-11-07",
-  "experience": [],
-  "education": [],
-  "skills": [],
-  "certifications": [],
-  "publications": [],
-  "awards": [],
-  "projects": [],
+  "headline": "Co-founder & CTO, Tvara | BE CSE, SVMIT (VTU) '26 | AI, C++, CUDA",
+  "about": "Co-founder and CTO of Tvara, building agentic AI and RAG systems for enterprise workflows across 6 countries. Previously a contract Software Architect with the Department of EDCS, Government of Karnataka. Raised $75K pre-seed at a $1M valuation with Marwari Catalysts.",
+  "lastUpdated": "2026-11-08",
+  "experience": [
+    {
+      "id": "tvara-cto",
+      "organization": "Tvara",
+      "position": "Co-Founder & CTO",
+      "description": "Raised $75,000 in pre-seed funding at a $1M valuation, backed by Marwari Catalysts; scaled Tvara across 6 countries with 50+ global partners and technical ecosystem support from Google Cloud and AWS. Led architecture of production AI systems combining LLMs, RAG, agentic workflows and external APIs, including persona- and profile-aware retrieval for context-sensitive enterprise reasoning. Directed technical strategy across AI infrastructure, integrations and enterprise deployments with CXOs and engineering teams.",
+      "startDate": "2025-12",
+      "location": "Bengaluru, India"
+    },
+    {
+      "id": "edcs-contract",
+      "organization": "Dept. of EDCS, Government of Karnataka",
+      "position": "Software Architect (Contract)",
+      "description": "Led a 5-member engineering team to architect and deploy a statewide Social Economic Survey application with secure data capture, multilingual workflows and government database integration. Designed infrastructure and rollout for 150K field surveyors supporting large-scale concurrent data collection, architecting technology intended to cover 60M+ citizens across Karnataka.",
+      "startDate": "2025-09",
+      "endDate": "2025-11",
+      "location": "Karnataka, India"
+    },
+    {
+      "id": "sports-media-intern",
+      "organization": "Sports Media Inc",
+      "position": "Lead Unreal Game Design Remote Intern",
+      "description": "Integrated real-world maps into an unannounced game via Cesium Maps for Unreal Engine. Implemented vehicle motion and physics for cars, trucks and helicopters with chase and timer mechanics. Worked across Unreal Engine Blueprints, C++, version control and Unreal Multi-user Editing (MUE).",
+      "startDate": "2024-09",
+      "endDate": "2024-12",
+      "location": "Denver, USA"
+    },
+    {
+      "id": "ea-forage",
+      "organization": "Electronic Arts (Forage)",
+      "position": "Virtual Software Engineer",
+      "description": "Proposed and prototyped a feature for The Sims 4 allowing players to record real-life voice or music as in-game songs. Patched a bug fix and optimised the Sims 4 codebase by implementing improved C++ vectors instead of arrays.",
+      "startDate": "2024-06",
+      "endDate": "2024-06"
+    },
+    {
+      "id": "techhub-secretary",
+      "organization": "TechHub SVMIT (College Technical Club)",
+      "position": "Secretary",
+      "description": "Led a 50+ member technical club, growing membership from 30 to 50; organised the college's largest 24-hour national-level hackathon with 1,800+ applicants, and taught DSA to 50+ junior students over five weeks.",
+      "startDate": "2024-09",
+      "endDate": "2026-08",
+      "location": "Bengaluru, India"
+    },
+    {
+      "id": "techhub-dsa-mentor",
+      "organization": "TechHub SVMIT (College Technical Club)",
+      "position": "Manager and DSA Mentor",
+      "description": "Taught DSA to 50+ junior-year students over five weeks, culminating in a hackathon. Organised TechVistara 4.0, TechVistara 3.0, MLOps Workshop, C4GT Workshop, Git Workshop and GameDev Workshop with 400+ attendees per event.",
+      "startDate": "2024-02",
+      "endDate": "2024-09",
+      "location": "Bengaluru, India"
+    }
+  ],
+  "education": [
+    {
+      "id": "btech-cse",
+      "institution": "Sir M Visvesvaraya Institute of Technology",
+      "degree": "Bachelor of Engineering in Computer Science",
+      "department": "Computer Science",
+      "affiliation": "Visvesvaraya Technological University (VTU)",
+      "startDate": "2022",
+      "endDate": "2026",
+      "gpa": "9.05/10.0",
+      "verification": "verified",
+      "notes": ["Recorded from the owner's résumé."]
+    }
+  ],
+  "skills": [
+    "C++",
+    "Python",
+    "Machine Learning",
+    "Data Structures & Algorithms",
+    "Operating Systems",
+    "MySQL",
+    "DevOps",
+    "Google Cloud",
+    "AWS",
+    "Git & GitHub",
+    "CUDA",
+    "OpenGL",
+    "Unreal Engine",
+    "SDL",
+    "Retrieval-Augmented Generation",
+    "Agentic AI"
+  ],
+  "certifications": [
+    { "id": "sql-masterclass", "title": "SQL Masterclass: SQL for Data Analytics", "organization": "Udemy", "description": "Completed July 2024.", "startDate": "2024-07" },
+    { "id": "opengl-cert", "title": "Computer Graphics with Modern OpenGL and C++", "organization": "Udemy", "description": "Completed July 2024.", "startDate": "2024-07" },
+    { "id": "cuda-cert", "title": "Introduction to CUDA with C++", "organization": "NVIDIA", "description": "Completed April 2024.", "startDate": "2024-04" },
+    { "id": "modern-cpp-cert", "title": "Complete Modern C++", "organization": "Udemy", "description": "Completed November 2023.", "startDate": "2023-11" },
+    { "id": "dsa-exercises-cert", "title": "C++ Data Structures & Algorithms Exercises", "organization": "Udemy", "description": "Completed October 2023.", "startDate": "2023-10" },
+    { "id": "dsa-c-cpp-cert", "title": "Mastering Data Structures & Algorithms using C and C++", "organization": "Udemy", "description": "Completed August 2023.", "startDate": "2023-08" },
+    { "id": "c-everyone-cert", "title": "C for Everyone: Programming Fundamentals", "organization": "Coursera", "description": "Completed August 2022.", "startDate": "2022-08" }
+  ],
+  "publications": [
+    {
+      "id": "context-layer-pub",
+      "title": "The Context Layer: Source-Aware Compression for Stateless LLM Inference",
+      "organization": "Tvara Research",
+      "description": "June 2026.",
+      "startDate": "2026-06"
+    },
+    {
+      "id": "rase-pub",
+      "title": "RASE: Retrieval Augmented Story Engine — Narration Control in Game Using AI",
+      "organization": "International Journal of Innovative Research in Technology",
+      "description": "Vol. 12, pp. 3539–3553, September 2025.",
+      "startDate": "2025-09"
+    },
+    {
+      "id": "cuda-pub",
+      "title": "A* and Dijkstra's Algorithm Simultaneously on NVIDIA GPU Using CUDA C++",
+      "organization": "International Journal of Innovative Research in Technology",
+      "description": "Vol. 11, pp. 236–244, January 2025.",
+      "startDate": "2025-01"
+    }
+  ],
+  "awards": [
+    {
+      "id": "top-20-innovators",
+      "title": "Top 20 Rising Tech Innovators — 4th IT Confex & IT Excellence Awards 2026, Delhi",
+      "description": "Recognised among the Top 20 Rising Tech Innovators at the 4th IT Confex & IT Excellence Awards.",
+      "startDate": "2026-08"
+    },
+    {
+      "id": "dubai-startup-exchange",
+      "title": "Tvara — Startup Exchange, Dubai (UAE)",
+      "description": "Invited to represent Tvara at an exclusive startup exchange, presenting its AI platform and technology roadmap to founders and ecosystem stakeholders.",
+      "startDate": "2026-02"
+    },
+    {
+      "id": "uow-workshop",
+      "title": "International Learning Week — University of Wollongong Malaysia, Kuala Lumpur",
+      "description": "Selected for an international program on AI and business, collaborating with students from diverse backgrounds on market entry, customer behavior and ethical data use.",
+      "startDate": "2025-02"
+    },
+    {
+      "id": "perfect-score",
+      "title": "1 of 7 students to score 100/100 (batch of 850+)",
+      "description": "Perfect scores across three semesters in four subjects: CAED, DSA, Major Project and Socio Connect Responsibility.",
+      "startDate": "2025-02"
+    }
+  ],
+  "projects": [
+    {
+      "id": "tvara-community",
+      "title": "Tvara Community",
+      "description": "Long-running autonomous AI engagement agent combining persistent state, event-driven execution, scheduled workflows, retrieval-based context and LLM reasoning for continuous community management.",
+      "category": "AI Agent",
+      "technologies": ["Autonomous Agent", "Persistent State", "Retrieval-based Context", "LLM"],
+      "startDate": "2026-06",
+      "featured": true
+    },
+    {
+      "id": "real-estate-discovery",
+      "title": "Real Estate Discovery Agent — Obeya Smart Workspaces",
+      "description": "Autonomous discovery pipeline aggregating heterogeneous web data for commercial properties and prospects, with information extraction, lead qualification, contextual matching and prioritization across hundreds of properties and leads.",
+      "category": "AI Agent",
+      "technologies": ["Autonomous Pipeline", "Data Aggregation", "Lead Qualification"],
+      "startDate": "2025-11",
+      "featured": false
+    },
+    {
+      "id": "guunj",
+      "title": "Guunj — Community Activity Engagement Agent",
+      "description": "AI-driven engagement agent automating event discovery, outreach, participant tracking and coordination across 20+ events serving 1,200+ participants.",
+      "category": "AI Agent",
+      "technologies": ["AI Engagement Agent", "Event Automation", "Participant Tracking"],
+      "startDate": "2025-08",
+      "featured": true
+    },
+    {
+      "id": "2d-game-engine",
+      "title": "2D Game Engine",
+      "description": "Lightweight 2D game engine built from scratch with reusable systems for game loops, rendering, input, collision detection, scenes, entities, asset management and object lifecycle.",
+      "category": "Game Engineering",
+      "technologies": ["C++", "SDL"],
+      "startDate": "2024-12",
+      "featured": false
+    }
+  ],
   "posts": [],
-  "verificationNote": "This file is the single source for professional profile content. No LinkedIn scraping or restricted API access is used."
+  "verificationNote": "Populated from the owner's PDF résumé. LinkedIn is linked as a public profile only; nothing is scraped."
 }

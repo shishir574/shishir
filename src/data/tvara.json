@@ -55,7 +55,29 @@
       "description": "Measuring model and workflow quality before and after deployment."
     }
   ],
-  "milestones": [],
-  "metrics": [],
-  "disclosureNote": "Commercial metrics, funding figures and client counts are withheld until they are verified and approved for publication."
+  "milestones": [
+    {
+      "id": "preseed-round",
+      "title": "Pre-seed raised; international scale-up",
+      "date": "2026-02",
+      "description": "Raised $75,000 in pre-seed funding at a $1M valuation, backed by Marwari Catalysts. Scaled Tvara across 6 countries with 50+ global partners and technical ecosystem support from Google Cloud and AWS.",
+      "verification": "verified"
+    },
+    {
+      "id": "startup-exchange",
+      "title": "Tvara — Startup Exchange, Dubai",
+      "date": "2026-02",
+      "description": "Invited to represent Tvara at an exclusive startup exchange, presenting its AI platform and technology roadmap to founders and ecosystem stakeholders.",
+      "verification": "verified"
+    }
+  ],
+  "metrics": [
+    { "id": "preseed", "label": "PRE-SEED RAISED", "value": "$75,000", "verification": "verified" },
+    { "id": "valuation", "label": "VALUATION", "value": "$1M", "verification": "verified" },
+    { "id": "countries", "label": "COUNTRIES", "value": "6", "verification": "verified" },
+    { "id": "partners", "label": "GLOBAL PARTNERS", "value": "50+", "verification": "verified" },
+    { "id": "accelerator", "label": "BACKED BY", "value": "MARWARI CATALYSTS", "verification": "verified" },
+    { "id": "ecosystem", "label": "ECOSYSTEM SUPPORT", "value": "GOOGLE CLOUD · AWS", "verification": "verified" }
+  ],
+  "disclosureNote": "Funding figures above are published from the founder's résumé. Client counts and other commercial internals remain undisclosed."
 }

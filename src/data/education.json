@@ -2,20 +2,34 @@
   "records": [
     {
       "id": "btech-cse",
-      "institution": "Sir M. Visvesvaraya Institute of Technology",
-      "degree": "B.Tech in Computer Science and Engineering",
-      "department": "Computer Science and Engineering",
+      "institution": "Sir M Visvesvaraya Institute of Technology",
+      "degree": "Bachelor of Engineering in Computer Science",
+      "department": "Computer Science",
       "affiliation": "Visvesvaraya Technological University (VTU)",
-      "startDate": "2021",
-      "endDate": "2025",
-      "gpa": "9.1/10",
-      "verification": "pending",
+      "startDate": "2022",
+      "endDate": "2026",
+      "gpa": "9.05/10.0",
+      "verification": "verified",
       "notes": [
-        "Institution, degree and GPA are recorded from the owner's résumé context.",
-        "Dates, GPA and coursework must be checked against the final approved academic record before publication."
+        "Recorded from the owner's résumé.",
+        "Coursework years and subject marks are not itemised in the résumé and are not inferred."
       ]
     }
   ],
-  "courses": [],
-  "achievements": []
+  "courses": [
+    { "id": "c-plus-plus", "name": "C++", "category": "Programming", "academicYear": "2022–2026", "technologies": ["C++"], "relatedProjects": [] },
+    { "id": "machine-learning", "name": "Machine Learning", "category": "AI / ML", "academicYear": "2022–2026", "technologies": ["ML"], "relatedProjects": [] },
+    { "id": "python", "name": "Python", "category": "Programming", "academicYear": "2022–2026", "technologies": ["Python"], "relatedProjects": [] },
+    { "id": "data-structures", "name": "Data Structures", "category": "CS Core", "academicYear": "2022–2026", "technologies": [], "relatedProjects": [] },
+    { "id": "operating-systems", "name": "Operating Systems", "category": "CS Core", "academicYear": "2022–2026", "technologies": [], "relatedProjects": [] },
+    { "id": "mysql", "name": "MySQL", "category": "Databases", "academicYear": "2022–2026", "technologies": ["MySQL"], "relatedProjects": [] },
+    { "id": "devops", "name": "DevOps", "category": "Cloud / DevOps", "academicYear": "2022–2026", "technologies": ["DevOps"], "relatedProjects": [] },
+    { "id": "google-cloud", "name": "Google Cloud", "category": "Cloud / DevOps", "academicYear": "2022–2026", "technologies": ["Google Cloud"], "relatedProjects": [] },
+    { "id": "aws", "name": "AWS", "category": "Cloud / DevOps", "academicYear": "2022–2026", "technologies": ["AWS"], "relatedProjects": [] },
+    { "id": "computer-organisation", "name": "Computer Organisation", "category": "CS Core", "academicYear": "2022–2026", "technologies": [], "relatedProjects": [] },
+    { "id": "git-github", "name": "Git and GitHub", "category": "Cloud / DevOps", "academicYear": "2022–2026", "technologies": ["Git", "GitHub"], "relatedProjects": [] }
+  ],
+  "achievements": [
+    "1 of 7 students to score 100/100 among a batch of 850+ students across three semesters, in four subjects: CAED, DSA, Major Project and Socio Connect Responsibility."
+  ]
 }

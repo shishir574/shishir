@@ -3,6 +3,7 @@ import { Section } from "@/components/layout/Section";
 import { research } from "@/data";
 import { StatusDot } from "@/components/ui/StatusDot";
 import { TagList } from "@/components/ui/Panel";
+import { formatMonthYear } from "@/lib/formatting/date";
 
 export function ResearchSection() {
   return (
@@ -11,7 +12,7 @@ export function ResearchSection() {
       index="03"
       kicker="RESEARCHER FILE / PUBLICATIONS"
       title="Research records, held to a verification standard."
-      description="Publication metadata is displayed only when it can be checked. Until then, records state what is known and mark everything else as pending rather than reconstructing a paper from memory."
+      description="Bibliographic metadata is displayed only when it can be checked against a source. Verified records show their provenance; anything else stays explicitly pending rather than reconstructed from memory."
     >
       <div className="research-layout">
         <ol className="research-list">
@@ -26,11 +27,20 @@ export function ResearchSection() {
                 </div>
                 <div className="research-card__body">
                   <div className="research-card__top">
-                    <span className="research-card__year">{record.publicationDate}</span>
+                    <span className="research-card__year">
+                      {formatMonthYear(record.publicationDate)}
+                    </span>
                     <span className="research-card__venue">{record.venue}</span>
-                    <StatusDot tone="warning" label="VERIFICATION PENDING" />
+                    {record.verification === "verified" ? (
+                      <StatusDot tone="live" label="VERIFIED" />
+                    ) : (
+                      <StatusDot tone="warning" label="VERIFICATION PENDING" />
+                    )}
                   </div>
-                  <h3 className="research-card__title">{record.shortTitle}</h3>
+                  <h3 className="research-card__title">{record.title}</h3>
+                  {record.authors.length > 0 ? (
+                    <p className="research-card__authors">{record.authors.join(", ")}</p>
+                  ) : null}
                   <p className="research-card__summary">{record.summary}</p>
                   <p className="research-card__note">{record.recordNote}</p>
                   <TagList items={record.topics} ariaLabel={`${record.shortTitle} topics`} />
@@ -53,7 +63,7 @@ export function ResearchSection() {
               </li>
               <li>
                 <span>02</span>
-                <p>Record authors, venue, date and identifiers exactly.</p>
+                <p>Record authors, venue, date and page numbers exactly.</p>
               </li>
               <li>
                 <span>03</span>
@@ -69,9 +79,9 @@ export function ResearchSection() {
           <div className="research-aside__note">
             <FlaskConical size={18} aria-hidden="true" />
             <p>
-              No DOIs, page numbers, citations or benchmark values appear in this archive until
-              they have been verified. Crossref and OpenAlex will be used only once identifiers
-              are known.
+              The two IJIRT records above are verified against the owner&apos;s résumé. DOIs,
+              PDFs and benchmark figures are still not provided and are not inferred. Crossref
+              and OpenAlex will be used once identifiers are available.
             </p>
           </div>
         </aside>

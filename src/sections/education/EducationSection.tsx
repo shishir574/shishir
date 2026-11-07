@@ -1,8 +1,9 @@
-import { GraduationCap, ScrollText } from "lucide-react";
+import { Award, GraduationCap, ScrollText } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 import { EmptyState } from "@/components/status/DataState";
 import { StatusDot } from "@/components/ui/StatusDot";
-import { education } from "@/data";
+import { education, linkedin } from "@/data";
+import { formatMonthYear } from "@/lib/formatting/date";
 
 export function EducationSection() {
   return (
@@ -10,8 +11,8 @@ export function EducationSection() {
       id="education"
       index="07"
       kicker="ACADEMIC RECORD"
-      title="Academic record, pending final verification."
-      description="The degree context is recorded here, but dates, GPA and coursework remain marked as unverified until they are checked against the final academic record."
+      title="Academic record, verified from the résumé."
+      description="Degree, dates, GPA and coursework are recorded from the owner's résumé. Subject marks are not itemised there and are not inferred."
     >
       <div className="education-layout">
         <div className="education-records">
@@ -26,7 +27,11 @@ export function EducationSection() {
                   <h3 className="education-card__degree">{record.degree}</h3>
                   <p className="education-card__institution">{record.institution}</p>
                 </div>
-                <StatusDot tone="warning" label="PENDING VERIFICATION" />
+                {record.verification === "verified" ? (
+                  <StatusDot tone="live" label="VERIFIED RECORD" />
+                ) : (
+                  <StatusDot tone="warning" label="PENDING VERIFICATION" />
+                )}
               </div>
 
               <dl className="meta-list meta-list--grid">
@@ -83,6 +88,28 @@ export function EducationSection() {
                 No verified course records. Subject marks will not be approximated or generated
                 to fill a chart.
               </p>
+            )}
+          </div>
+
+          <div className="panel">
+            <div className="panel__head">
+              <span className="mono-label">CERTIFICATIONS</span>
+              <Award size={16} aria-hidden="true" />
+            </div>
+            {linkedin.certifications.length > 0 ? (
+              <ul className="course-list">
+                {linkedin.certifications.map((certification) => (
+                  <li key={certification.id}>
+                    <span className="certification__title">{certification.title}</span>
+                    <span className="certification__meta">
+                      {certification.organization ?? "—"} ·{" "}
+                      {formatMonthYear(certification.startDate)}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="empty-inline">No certification records.</p>
             )}
           </div>
 

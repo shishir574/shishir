@@ -1,4 +1,4 @@
-import { Braces, Cpu, DatabaseZap, Workflow } from "lucide-react";
+import { Braces, Cpu, DatabaseZap, Gamepad2, Workflow } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 import { SkillMap } from "@/components/diagrams/SkillMap";
 import { TagList } from "@/components/ui/Panel";
@@ -7,6 +7,7 @@ import { skills } from "@/data";
 const ICONS = {
   "ai-ml": Cpu,
   engineering: Braces,
+  "game-engineering": Gamepad2,
   gpu: DatabaseZap,
   product: Workflow,
 } as const;

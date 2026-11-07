@@ -14,6 +14,13 @@ import type {
   VerificationStatus,
 } from "./content";
 
+export interface ContactInfo {
+  email: string;
+  phone: string;
+  city: string;
+  country: string;
+}
+
 export interface ProfileIdentity {
   name: string;
   shortName: string;
@@ -23,6 +30,7 @@ export interface ProfileIdentity {
   intro: string;
   currentFocus: string[];
   locationNote: string;
+  contact: ContactInfo;
   externalLinks: { label: string; url: string }[];
 }
 

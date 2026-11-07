@@ -4,6 +4,7 @@ import { TvaraArchitecture } from "@/components/diagrams/TvaraArchitecture";
 import { ExternalLink } from "@/components/ui/ExternalLink";
 import { TagList } from "@/components/ui/Panel";
 import { identifiers, tvara } from "@/data";
+import { formatMonthYear } from "@/lib/formatting/date";
 
 export function TvaraSection() {
   return (
@@ -67,6 +68,36 @@ export function TvaraSection() {
             ))}
           </ul>
         </div>
+      </div>
+
+      <div className="capability-block">
+        <div className="block-head">
+          <p className="mono-label">COMPANY MILESTONES</p>
+          <p className="block-head__note">FROM THE FOUNDER&apos;S RÉSUMÉ</p>
+        </div>
+        {tvara.metrics.length > 0 ? (
+          <div className="metric-strip" role="list" aria-label="Tvara funding metrics">
+            {tvara.metrics.map((metric) => (
+              <div key={metric.id} className="metric" role="listitem">
+                <p className="metric__value">{metric.value}</p>
+                <p className="metric__label">{metric.label}</p>
+              </div>
+            ))}
+          </div>
+        ) : null}
+        {tvara.milestones.length > 0 ? (
+          <ul className="milestone-list">
+            {tvara.milestones.map((milestone) => (
+              <li key={milestone.id} className="milestone">
+                <span className="milestone__date">{formatMonthYear(milestone.date)}</span>
+                <div>
+                  <p className="milestone__title">{milestone.title}</p>
+                  <p className="milestone__description">{milestone.description}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        ) : null}
       </div>
 
       <div className="capability-block">

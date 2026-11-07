@@ -2,42 +2,42 @@
   "records": [
     {
       "id": "rase",
-      "title": "RASE",
+      "title": "RASE: Retrieval Augmented Story Engine — Narration Control in Game Using AI",
       "shortTitle": "RASE",
-      "authors": [],
-      "venue": "IJIRT",
-      "publicationDate": "2025",
-      "abstract": "Abstract pending verification against the published IJIRT document.",
-      "summary": "RASE is recorded as an IJIRT 2025 publication. The full title, author list, identifiers and experimental results are intentionally withheld until they are verified against the paper itself.",
-      "topics": ["research", "systems"],
-      "verification": "pending",
-      "recordNote": "Verified metadata, PDF and benchmarks will be added from the published document."
+      "authors": ["Shishir Govinda M", "N. Chaitra", "Shiva Keerthi M. P.", "Rohit Mesta"],
+      "venue": "International Journal of Innovative Research in Technology · Vol. 12 · pp. 3539–3553",
+      "publicationDate": "2025-09",
+      "abstract": "Full abstract not reproduced in the résumé; consult the published IJIRT article.",
+      "summary": "Designed a context-aware narrative architecture combining vectorized game knowledge, retrieval, LLM generation, persistent narrative state and Supervised Fine-Tuning to adapt stories to player actions while preserving developer constraints. Evaluation protocol covers narrative coherence, contextual relevance, engagement and system performance, with analysis of persistent state, retrieval latency, scalability, designer control and user-study validation.",
+      "topics": ["retrieval-augmented-generation", "narrative-ai", "game-ai", "ai", "fine-tuning"],
+      "verification": "verified",
+      "recordNote": "Bibliographic metadata verified against the owner's résumé. PDF, DOI and benchmarks are not provided and are not inferred."
     },
     {
       "id": "cuda-pathfinding",
-      "title": "CUDA A* / Dijkstra",
+      "title": "A* and Dijkstra's Algorithm Simultaneously on NVIDIA GPU Using CUDA C++",
       "shortTitle": "CUDA PATHFINDING",
-      "authors": [],
-      "venue": "IJIRT",
-      "publicationDate": "2024-11",
-      "abstract": "Abstract pending verification against the published IJIRT document.",
-      "summary": "A research record for GPU-accelerated A* and Dijkstra pathfinding, published in IJIRT in November 2024. Exact title, author list and benchmark figures remain unverified.",
-      "topics": ["research", "cuda", "algorithms"],
-      "verification": "pending",
-      "recordNote": "Benchmarks and the final paper title must be taken from the publication, not reconstructed."
+      "authors": ["Shishir Govinda M", "T. V. S"],
+      "venue": "International Journal of Innovative Research in Technology · Vol. 11 · pp. 236–244",
+      "publicationDate": "2025-01",
+      "abstract": "Full abstract not reproduced in the résumé; consult the published IJIRT article.",
+      "summary": "Implemented a bidirectional A*–Dijkstra pathfinding system in CUDA, redesigning CPU data structures for GPU execution and benchmarking 10K–56.25M nodes across varying obstacle densities and movement directions. Reports approximately 1500× lower measured execution time at peak under 30% obstacles and 4-direction movement, with scalability analysis via Amdahl's Law, GPU memory, 1D data layouts and CPU–GPU transfer constraints.",
+      "topics": ["cuda", "gpu", "pathfinding", "a-star", "dijkstra", "benchmarking"],
+      "verification": "verified",
+      "recordNote": "Bibliographic metadata verified against the owner's résumé. PDF, DOI and benchmarks are not provided and are not inferred."
     },
     {
       "id": "tvara-context-layer",
-      "title": "Tvara Context Layer",
+      "title": "The Context Layer: Source-Aware Compression for Stateless LLM Inference",
       "shortTitle": "CONTEXT LAYER",
-      "authors": [],
-      "venue": "Tvara research",
+      "authors": ["Shishir Govinda M"],
+      "venue": "Tvara Research",
       "publicationDate": "2026-06",
-      "abstract": "Research summary pending internal publication approval.",
-      "summary": "An applied research record covering Tvara's context layer. The architectural description will be published only after the material is cleared for public release.",
-      "topics": ["research", "rag", "agentic-ai"],
-      "verification": "pending",
-      "recordNote": "Awaiting public-release approval. No internal company information is exposed here."
+      "abstract": "Proposes a context-management layer between fragmented business data and stateless LLM inference that retrieves, classifies, ranks, compresses and structures task-specific context using provenance, recency, persistence, permissions, relevance and token cost.",
+      "summary": "Proposed a context-management layer between fragmented business data and stateless LLM inference that retrieves, classifies, ranks, compresses and structures task-specific context using provenance, recency, persistence, permissions, relevance and token cost. Evaluation is defined across groundedness, source attribution, hallucination rate, consistency, latency, token efficiency and actionability, with ablations isolating metadata, recency, persistence, structure, compression and redundancy.",
+      "topics": ["context-layer", "llm-inference", "rag", "agentic-ai", "evaluation"],
+      "verification": "verified",
+      "recordNote": "Tvara Research record verified against the owner's résumé. This is an internal research publication, not a peer-reviewed venue; no external identifiers are claimed."
     }
   ]
 }

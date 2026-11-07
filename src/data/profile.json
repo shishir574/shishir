@@ -13,6 +13,12 @@
       "Product architecture"
     ],
     "locationNote": "Location is read from the live GitHub record, never hardcoded.",
+    "contact": {
+      "email": "shishirgovinda11@gmail.com",
+      "phone": "+91 98451 02188",
+      "city": "Bangalore",
+      "country": "India"
+    },
     "externalLinks": [
       { "label": "GitHub", "url": "https://github.com/shishir574" },
       { "label": "LinkedIn", "url": "https://www.linkedin.com/in/shishir-govinda-m" },

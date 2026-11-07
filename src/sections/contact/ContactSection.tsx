@@ -20,6 +20,33 @@ export function ContactSection() {
     >
       <div className="contact-layout">
         <ul className="contact-links">
+          <li>
+            <a href={`mailto:${identity.contact.email}`} className="contact-link">
+              <span className="contact-link__index">01</span>
+              <span className="contact-link__body">
+                <span className="contact-link__label">Email</span>
+                <span className="contact-link__meta">Direct contact</span>
+              </span>
+              <span className="contact-link__url">{identity.contact.email}</span>
+              <ArrowUpRight size={18} aria-hidden="true" />
+            </a>
+          </li>
+          <li>
+            <a
+              href={`tel:+${identity.contact.phone.replace(/[^0-9]/g, "")}`}
+              className="contact-link"
+            >
+              <span className="contact-link__index">02</span>
+              <span className="contact-link__body">
+                <span className="contact-link__label">Phone</span>
+                <span className="contact-link__meta">
+                  {identity.contact.city}, {identity.contact.country}
+                </span>
+              </span>
+              <span className="contact-link__url">{identity.contact.phone}</span>
+              <ArrowUpRight size={18} aria-hidden="true" />
+            </a>
+          </li>
           {identity.externalLinks.map((link, index) => (
             <li key={link.url}>
               <a
@@ -29,7 +56,7 @@ export function ContactSection() {
                 className="contact-link"
               >
                 <span className="contact-link__index">
-                  {String(index + 1).padStart(2, "0")}
+                  {String(index + 3).padStart(2, "0")}
                 </span>
                 <span className="contact-link__body">
                   <span className="contact-link__label">{link.label}</span>
@@ -45,7 +72,32 @@ export function ContactSection() {
         </ul>
 
         <aside className="contact-aside panel">
-          <p className="mono-label">ARCHIVE IDENTIFIERS</p>
+          <p className="mono-label">CONTACT</p>
+          <dl className="meta-list">
+            <div>
+              <dt>EMAIL</dt>
+              <dd>
+                <a href={`mailto:${identity.contact.email}`}>{identity.contact.email}</a>
+              </dd>
+            </div>
+            <div>
+              <dt>PHONE</dt>
+              <dd>
+                <a href={`tel:+${identity.contact.phone.replace(/[^0-9]/g, "")}`}>
+                  {identity.contact.phone}
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt>BASE</dt>
+              <dd>
+                {identity.contact.city}, {identity.contact.country}
+              </dd>
+            </div>
+          </dl>
+          <p className="mono-label" style={{ marginTop: "1rem" }}>
+            ARCHIVE IDENTIFIERS
+          </p>
           <dl className="meta-list">
             <div>
               <dt>GITHUB</dt>

@@ -1,4 +1,41 @@
 {
-  "records": [],
-  "note": "Project records are intentionally empty. Verified projects will be added with repository links, architecture notes and results; none are invented here."
+  "records": [
+    {
+      "id": "tvara-community",
+      "title": "Tvara Community",
+      "description": "Long-running autonomous AI engagement agent combining persistent state, event-driven execution, scheduled workflows, retrieval-based context and LLM reasoning for continuous community management. Identifies engagement opportunities from ongoing activity and generates context-aware responses without manual intervention.",
+      "category": "AI Agent",
+      "technologies": ["Autonomous Agent", "Persistent State", "Retrieval-based Context", "LLM"],
+      "startDate": "2026-06",
+      "featured": true
+    },
+    {
+      "id": "real-estate-discovery",
+      "title": "Real Estate Discovery Agent — Obeya Smart Workspaces",
+      "description": "Autonomous discovery pipeline aggregating heterogeneous web data for commercial properties and prospects, with information extraction, lead qualification, contextual matching and prioritization across hundreds of properties and leads.",
+      "category": "AI Agent",
+      "technologies": ["Autonomous Pipeline", "Data Aggregation", "Lead Qualification"],
+      "startDate": "2025-11",
+      "featured": false
+    },
+    {
+      "id": "guunj",
+      "title": "Guunj — Community Activity Engagement Agent",
+      "description": "AI-driven engagement agent automating event discovery, outreach, participant tracking and coordination across 20+ events serving 1,200+ participants.",
+      "category": "AI Agent",
+      "technologies": ["AI Engagement Agent", "Event Automation", "Participant Tracking"],
+      "startDate": "2025-08",
+      "featured": true
+    },
+    {
+      "id": "2d-game-engine",
+      "title": "2D Game Engine",
+      "description": "Lightweight 2D game engine built from scratch with reusable systems for game loops, rendering, input, collision detection, scenes, entities, asset management and object lifecycle, structured around reusable components for iterative gameplay development.",
+      "category": "Game Engineering",
+      "technologies": ["C++", "SDL"],
+      "startDate": "2024-12",
+      "featured": false
+    }
+  ],
+  "note": "Project records are taken from the owner's updated résumé. Repository and demo links are not listed in the résumé and are not inferred; live repository activity is available in the GitHub file."
 }

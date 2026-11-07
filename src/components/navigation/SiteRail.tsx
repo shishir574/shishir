@@ -1,5 +1,5 @@
 import { sections } from "@/app/routes";
-import { identifiers } from "@/data";
+import { identifiers, identity } from "@/data";
 import { useUtcClock } from "@/hooks/useUtcClock";
 
 function GithubIcon({ size = 15 }: { size?: number }) {
@@ -68,6 +68,31 @@ export function SiteRail({ active }: { active: string }) {
           <div>
             <dt>SOURCE</dt>
             <dd>GIT / PAGES</dd>
+          </div>
+          <div>
+            <dt>EMAIL</dt>
+            <dd>
+              <a className="rail__contact-link" href={`mailto:${identity.contact.email}`}>
+                {identity.contact.email}
+              </a>
+            </dd>
+          </div>
+          <div>
+            <dt>PHONE</dt>
+            <dd>
+              <a
+                className="rail__contact-link"
+                href={`tel:+${identity.contact.phone.replace(/[^0-9]/g, "")}`}
+              >
+                {identity.contact.phone}
+              </a>
+            </dd>
+          </div>
+          <div>
+            <dt>BASE</dt>
+            <dd>
+              {identity.contact.city} / {identity.contact.country}
+            </dd>
           </div>
         </dl>
         <a

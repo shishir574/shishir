@@ -24,16 +24,36 @@
       "label": "Engineering",
       "description": "Fundamentals and systems architecture.",
       "items": [
+        "C++",
+        "Python",
         "Data structures",
         "Algorithms",
         "Operating systems",
+        "SQL / MySQL",
         "Computer networks",
         "Databases",
         "Distributed systems",
         "Cloud infrastructure",
         "DevOps",
+        "Google Cloud",
+        "AWS",
+        "Git & GitHub",
         "System design",
         "Software architecture"
+      ]
+    },
+    {
+      "id": "game-engineering",
+      "label": "Game engineering",
+      "description": "Realtime 3D engines and gameplay systems.",
+      "items": [
+        "Unreal Engine",
+        "Blueprints",
+        "C++ gameplay",
+        "OpenGL",
+        "SDL",
+        "Cesium Maps",
+        "Multi-user editing"
       ]
     },
     {

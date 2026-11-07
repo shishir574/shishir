@@ -4,7 +4,7 @@ import { EmptyState } from "@/components/status/DataState";
 import { ExternalLink } from "@/components/ui/ExternalLink";
 import { StatusDot } from "@/components/ui/StatusDot";
 import { linkedin } from "@/data";
-import { formatDate } from "@/lib/formatting/date";
+import { formatDate, formatMonthYear } from "@/lib/formatting/date";
 
 function LinkedInIcon({ size = 16 }: { size?: number }) {
   return (
@@ -39,7 +39,8 @@ export function ExperienceSection() {
                   <span className="timeline__marker" aria-hidden="true" />
                   <div className="timeline__body">
                     <p className="timeline__dates">
-                      {entry.startDate} — {entry.endDate ?? "PRESENT"}
+                      {formatMonthYear(entry.startDate)} —{" "}
+                      {entry.endDate ? formatMonthYear(entry.endDate) : "PRESENT"}
                     </p>
                     <h3 className="timeline__title">{entry.position}</h3>
                     <p className="timeline__org">{entry.organization}</p>
@@ -58,6 +59,27 @@ export function ExperienceSection() {
               </a>
             </EmptyState>
           )}
+
+          {linkedin.awards.length > 0 ? (
+            <div className="recognition">
+              <p className="mono-label">RECOGNITION / SELECTED</p>
+              <ul className="recognition-list">
+                {linkedin.awards.map((award) => (
+                  <li key={award.id} className="recognition-item">
+                    <span className="recognition-item__date">
+                      {formatMonthYear(award.startDate)}
+                    </span>
+                    <div>
+                      <p className="recognition-item__title">{award.title}</p>
+                      {award.description ? (
+                        <p className="recognition-item__description">{award.description}</p>
+                      ) : null}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
         </div>
 
         <aside className="experience-aside panel">

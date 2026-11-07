@@ -86,15 +86,18 @@ No client secret or token exists in the repository.
 
 ### LeetCode, LinkedIn, PlayStation, travel
 
-These are locally maintained snapshots or empty records. No scraping, undocumented endpoints,
+LinkedIn content is populated from the owner's PDF résumé. LeetCode, PlayStation and travel
+remain empty snapshots until the owner supplies records. No scraping, undocumented endpoints,
 Sony credentials, CORS proxies or synthetic activity generation are used.
 
 ## Content verification
 
-Records that have not been checked against source documents are marked `pending` and render a
-verification badge. Research titles, authors, DOIs, benchmarks, academic details, company
-metrics and personal statistics are never invented to fill a layout. To publish a record, edit
-the relevant JSON file and change `verification` to `verified` only after checking the source.
+Education, professional history, projects, certifications and the three research
+records are verified against the owner's résumé (updated November 2026). Anything that has
+not been checked against a source is marked `pending` and renders a verification badge.
+Research titles, authors, DOIs, benchmarks, academic details, company metrics and personal
+statistics are never invented to fill a layout. To publish another record, edit the relevant
+JSON file and change `verification` to `verified` only after checking the source.
 
 ## Deployment
 
@@ -121,5 +124,5 @@ interface. The footer exposes a signal-spectrum control to demonstrate token-lev
 - GitHub's unauthenticated rate limit is per visitor IP; heavy browsing can exhaust it.
 - Spotify cannot display the owner's personal data to anonymous visitors.
 - LeetCode and PlayStation have no supported public browser APIs for this use case.
-- Publication metadata must be supplied by the owner before it can be displayed.
+- Publication bibliographic metadata is supplied; DOIs, PDFs and benchmarks are not published until the source documents are provided.
 - The travel map waits for verified coordinates and photographs before Leaflet is introduced.
