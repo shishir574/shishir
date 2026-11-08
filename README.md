@@ -38,6 +38,12 @@ Open the URL printed by Vite (usually `http://localhost:5173`).
 ## Architecture
 
 ```text
+public/
+├── robots.txt       Search + AI crawlers (allow all, sitemap)
+├── llms.txt         LLM summary (llmstxt.org)
+├── sitemap.xml      Homepage URL (lastmod 2026-11-08)
+├── og-image.svg     Social share image (1200×630)
+└── favicon.svg      Site icon
 src/
 ├── app/             App shell and section registry
 ├── components/      Layout, navigation, terminal, charts, diagrams, UI
@@ -71,7 +77,18 @@ The GitHub section fetches public, unauthenticated data directly from
 
 - personal profile and public repositories, sorted by last push (newest first);
 - language bytes for up to five selected repositories;
-- Tvara organisation and repositories.
+- Tvara GitHub account and repositories — via `GET /users/TryTvara` and
+  `GET /users/TryTvara/repos` (TryTvara is a normal user account, not an
+  organisation; `/orgs/TryTvara` returns 404);
+- Tvara contribution history: up to 100 commits per repository for the four most
+  recently pushed TryTvara repositories, aggregated by UTC day into a 52-week
+  GitHub-style green calendar (public commits only). TryTvara currently has no
+  public repositories, so the calendar shows 0 public commits and links to the
+  GitHub profile and the `tvara-ai` organisation (https://github.com/tvara-ai)
+  for the full graph. Private-repo contributions (e.g. the 2,264 in the last
+  year shown on GitHub) cannot be fetched via the unauthenticated REST API;
+  pull requests and issues are not counted because REST does not expose the
+  full contribution graph.
 
 Responses are cached in memory with ETag support where exposed. A stale cached response is
 preferred over an error within the same session. Rate limits are surfaced explicitly.
@@ -93,6 +110,20 @@ used.
 Company record is aligned with https://tvara.global — AI Sales Brain with Matching Engine,
 Intelligent Campaigns, learning loop and existing-stack integrations. The Context Layer paper
 (20 June 2026) is linked from the Research section.
+
+## SEO & discovery
+
+- `index.html` carries the full meta set (title, description, keywords, canonical, Open
+  Graph, Twitter card) plus JSON-LD `Person` + `WebSite` + `Tvara` `Organization` so
+  searches for "Shishir Govinda LinkedIn" associate this site with
+  `linkedin.com/in/shishir-govinda-m`, `github.com/shishir574` and `tvara.global`.
+- `public/robots.txt` allows all crawlers (including AI assistants) and points to the
+  sitemap. `public/sitemap.xml` lists the homepage. `public/llms.txt` is the
+  machine-readable summary (https://llmstxt.org). `public/og-image.svg` is the share image.
+- The `<noscript>` fallback lists the name, role, profile links and education/research
+  lines so crawlers without JavaScript still see the key facts.
+- To re-index after deploy, submit `https://shishir574.github.io/sitemap.xml` in Google
+  Search Console / Bing Webmaster Tools. Rankings are not guaranteed.
 
 ## Deployment
 

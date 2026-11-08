@@ -37,6 +37,7 @@ export interface ProfileIdentity {
 export interface ArchiveIdentifiers {
   github: string;
   githubOrganisation: string;
+  tvaraOrg: string;
   linkedin: string;
   leetcode: string;
   playstation: string;

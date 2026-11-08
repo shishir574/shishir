@@ -1,4 +1,45 @@
 {
-  "locations": [],
+  "locations": [
+    {
+      "id": "thailand",
+      "country": "Thailand",
+      "city": "Thailand",
+      "latitude": 15.87,
+      "longitude": 100.99,
+      "visitDate": "",
+      "description": "",
+      "photos": []
+    },
+    {
+      "id": "malaysia",
+      "country": "Malaysia",
+      "city": "Malaysia",
+      "latitude": 4.21,
+      "longitude": 101.98,
+      "visitDate": "",
+      "description": "",
+      "photos": []
+    },
+    {
+      "id": "nepal",
+      "country": "Nepal",
+      "city": "Nepal",
+      "latitude": 28.39,
+      "longitude": 84.12,
+      "visitDate": "",
+      "description": "",
+      "photos": []
+    },
+    {
+      "id": "uae",
+      "country": "UAE",
+      "city": "UAE",
+      "latitude": 24.21,
+      "longitude": 54.05,
+      "visitDate": "",
+      "description": "",
+      "photos": []
+    }
+  ],
   "note": ""
 }

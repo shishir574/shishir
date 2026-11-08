@@ -1,0 +1,88 @@
+# Shishir Govinda M
+
+> Shishir Govinda M (also: Shishir Govinda) is Co-founder & CTO of Tvara — an AI Sales Brain platform, pre-seed funded by Marwari Catalysts — and an engineer and researcher based in Bangalore, India. This site is his personal archive: experience, education, research publications, projects, skills, and live GitHub activity. Site: https://shishir574.github.io/
+
+## About
+
+- **Name:** Shishir Govinda M (short name: Shishir Govinda)
+- **Current role:** Co-founder & CTO, Tvara (https://tvara.global)
+- **Roles:** Engineer, Founder, Researcher
+- **Location:** Bangalore, India
+- **Headline:** Co-founder & CTO, Tvara | BE CSE, SVMIT (VTU) '26 | AI, C++, CUDA
+- **Summary:** Co-founder and CTO of Tvara, building agentic AI and RAG systems for enterprise workflows. Previously a contract Software Architect with the Department of EDCS, Government of Karnataka. Pre-seed funded by Marwari Catalysts.
+- **Contact:** shishirgovinda11@gmail.com · +91 98451 02188
+- **Last updated:** 2026-11-08
+
+## Profiles & Links
+
+- **This archive:** https://shishir574.github.io/
+- **LinkedIn:** https://www.linkedin.com/in/shishir-govinda-m (shishir-govinda-m)
+- **GitHub (personal):** https://github.com/shishir574 (shishir574)
+- **LeetCode:** https://leetcode.com/u/Shishir_Govinda_M/ (Shishir_Govinda_M)
+- **Tvara:** https://tvara.global
+- **Tvara GitHub account:** https://github.com/TryTvara (TryTvara) — normal GitHub user account
+- **Tvara GitHub organisation:** https://github.com/tvara-ai (tvara-ai)
+- **Tvara Research — The Context Layer (PDF):** https://storage.googleapis.com/meta-bucket-tvara/research/Tvara_Context_Layer.pdf
+
+## Tvara
+
+Tvara is an AI Sales Brain — “Run your entire sales from one brain.” It connects data, matches the right opportunities, and runs outreach so every move is guided, not guessed. Four sales engines work as one system: Matching Engine, Intelligent Campaigns, learning from every interaction, and integration with your existing sales stack across Email, WhatsApp and calls.
+
+- **Founding team:** Founders — Ruchika Sureka, Founder & CEO; Shishir Govinda M, Co-founder & CTO.
+- **Funding:** Pre-seed funded by Marwari Catalysts.
+- **Capabilities:** Matching Engine (match every lead to the right offer, message angle and channel); Intelligent Campaigns (personalised Email and WhatsApp outreach with adaptive follow-ups); Learns from Every Interaction (emails, WhatsApp, calls, objections, outcomes); Your Existing Sales Stack (CRM, inbox, WhatsApp and lead sources — HubSpot, Salesforce, Zoho, Pipedrive, Gmail, Slack and more); Live Buyer Profile (role, intent stage, objection type, channel preference); Context Layer Research (source-aware compression for stateless LLM inference).
+- **Based:** Bangalore, India. **Ecosystem:** AWS · Google Cloud · NVIDIA (per tvara.global).
+
+## Experience
+
+- **Co-Founder & CTO, Tvara** (Bengaluru, India) — 2025-12 – Present. Pre-seed funded by Marwari Catalysts. Led architecture of production AI systems combining LLMs, RAG, agentic workflows and external APIs, including persona- and profile-aware retrieval for context-sensitive enterprise reasoning.
+- **Software Architect (Contract), Dept. of EDCS, Government of Karnataka** (Karnataka, India) — 2025-09 – 2025-11. Led a 5-member engineering team to architect and deploy a statewide Social Economic Survey application with secure data capture and multilingual workflows.
+- **Lead Unreal Game Design Remote Intern, Sports Media Inc** (Denver, USA) — 2024-09 – 2024-12. Integrated real-world maps via Cesium Maps for Unreal Engine; vehicle physics and chase/timer mechanics.
+- **Secretary, TechHub SVMIT (College Technical Club)** (Bengaluru, India) — 2024-09 – 2026-08. Led a 50+ member technical club; organised the college’s largest 24-hour national-level hackathon with 1,800+ applicants.
+- **Virtual Software Engineer, Electronic Arts (Forage)** — 2024-06. Prototyped a feature for The Sims 4; C++ optimisation work.
+- **Manager and DSA Mentor, TechHub SVMIT** (Bengaluru, India) — 2024-02 – 2024-09.
+
+## Education
+
+- **Bachelor of Engineering in Computer Science, Sir M Visvesvaraya Institute of Technology (SVMIT), affiliated to Visvesvaraya Technological University (VTU)** — 2022–2026, GPA 9.05/10.0, Computer Science.
+- **Coursework:** C++, Machine Learning, Python, Data Structures, Operating Systems, MySQL, DevOps, Google Cloud, AWS, Computer Organisation, Git and GitHub.
+
+## Research & Publications
+
+- **The Context Layer: Source-Aware Compression for Stateless LLM Inference** — Tvara Research, Volume 1 · Issue 1, published 20 June 2026. Author: Shishir Govinda M. PDF: https://storage.googleapis.com/meta-bucket-tvara/research/Tvara_Context_Layer.pdf
+- **RASE: Retrieval Augmented Story Engine — Narration Control in Game Using AI** — International Journal of Innovative Research in Technology, Vol. 12, pp. 3539–3553, September 2025. Authors: Shishir Govinda M, N. Chaitra, Shiva Keerthi M. P., Rohit Mesta.
+- **A* and Dijkstra's Algorithm Simultaneously on NVIDIA GPU Using CUDA C++** — International Journal of Innovative Research in Technology, Vol. 11, pp. 236–244, January 2025. Authors: Shishir Govinda M, T. V. S.
+
+## Projects
+
+- **Tvara Community** (2026-06, AI Agent) — Long-running autonomous AI engagement agent with persistent state, event-driven execution and retrieval-based context.
+- **Real Estate Discovery Agent — Obeya Smart Workspaces** (2025-11, AI Agent) — Autonomous discovery pipeline for commercial properties and prospects.
+- **Guunj — Community Activity Engagement Agent** (2025-08, AI Agent) — Event discovery, outreach and participant tracking across 20+ events serving 1,200+ participants.
+- **2D Game Engine** (2024-12, Game Engineering, C++ / SDL) — Lightweight 2D engine with game loops, rendering, input, collision, scenes and entities.
+
+## Skills
+
+AI / ML (Machine learning, Deep learning, Transformers, Large language models, RAG, Fine-tuning, LoRA, Agentic AI, Vector databases, Model evaluation, Inference optimisation); Engineering (C++, Python, Data structures, Algorithms, Operating systems, SQL / MySQL, Computer networks, Databases, Distributed systems, Cloud infrastructure, DevOps, Google Cloud, AWS, Git & GitHub, System design, Software architecture); Game engineering (Unreal Engine, Blueprints, C++ gameplay, OpenGL, SDL, Cesium Maps, Multi-user editing); Product (Product architecture, Technical leadership, API design, Enterprise deployment, Evaluation design).
+
+## Site Sections
+
+- **Home / Index:** https://shishir574.github.io/#home — Identity and current focus.
+- **About:** https://shishir574.github.io/#about — Builder, Founder and Researcher dimensions.
+- **Tvara:** https://shishir574.github.io/#tvara — Company record, founders, milestones and capabilities.
+- **Research:** https://shishir574.github.io/#research — Publications, newest first.
+- **Projects:** https://shishir574.github.io/#projects — Selected builds, newest first.
+- **Engineering:** https://shishir574.github.io/#engineering — Skill map.
+- **GitHub:** https://shishir574.github.io/#github — Live public repositories from shishir574 and TryTvara.
+- **Education:** https://shishir574.github.io/#education — Degree, coursework and certifications.
+- **Experience:** https://shishir574.github.io/#experience — Professional timeline, newest first.
+- **LeetCode:** https://shishir574.github.io/#leetcode — Problem-solving record.
+- **PlayStation:** https://shishir574.github.io/#gaming — Trophy and game library.
+- **Music:** https://shishir574.github.io/#music — Listening (authorised session only).
+- **Travel:** https://shishir574.github.io/#travel — Places visited.
+- **Contact:** https://shishir574.github.io/#contact — Email, phone and public profiles.
+
+## Optional
+
+- **Sitemap:** https://shishir574.github.io/sitemap.xml
+- **Robots:** https://shishir574.github.io/robots.txt
+- **LLM summary (this file):** https://shishir574.github.io/llms.txt

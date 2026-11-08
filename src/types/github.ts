@@ -68,6 +68,11 @@ export interface LanguageSlice {
   color: string;
 }
 
+export interface GitHubActivityDay {
+  date: string;
+  count: number;
+}
+
 export interface GitHubArchive {
   profile: GitHubProfile | null;
   repositories: GitHubRepository[];
@@ -76,6 +81,9 @@ export interface GitHubArchive {
   languages: LanguageSlice[];
   languageRepositoryCount: number;
   commits: GitHubCommit[];
+  organisationActivity: GitHubActivityDay[];
+  organisationCommitTotal: number;
+  organisationCommitRepositoryCount: number;
   warnings: string[];
   source: string;
   lastUpdated: number | null;

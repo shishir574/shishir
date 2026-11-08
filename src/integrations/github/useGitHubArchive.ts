@@ -2,25 +2,31 @@ import { useMemo } from "react";
 import { useApiResource, type ResourceState } from "@/hooks/useApiResource";
 import { toUserMessage, type ApiResponse } from "@/lib/api/types";
 import {
+  fetchCommits,
   fetchLanguages,
   fetchOrganisation,
   fetchOrganisationRepositories,
   fetchProfile,
   fetchRepositories,
   GITHUB_USERNAME,
+  TVARA_ACCOUNT,
 } from "./githubClient";
 import {
+  aggregateCommitsByDay,
   aggregateLanguages,
+  parseGitHubCommits,
   parseGitHubOrganisation,
   parseGitHubProfile,
   parseGitHubRepositories,
   parseLanguageMap,
+  selectCommitTargets,
   selectLanguageTargets,
   selectRepositories,
   type RepositoryLanguageData,
 } from "./githubTransformers";
 import type {
   GitHubArchive,
+  GitHubCommit,
   GitHubOrganisation,
   GitHubProfile,
   GitHubRepository,
@@ -137,7 +143,41 @@ async function loadGitHubArchive(signal: AbortSignal): Promise<ApiResponse<GitHu
   }
 
   const languages: LanguageSlice[] = aggregateLanguages(languageEntries);
-  const commits: [] = [];
+
+  const selectedOrgRepositories = selectRepositories(organisationRepositories, 6, {
+    includeForks: false,
+    includeArchived: false,
+  });
+  const commitTargets = selectCommitTargets(selectedOrgRepositories, 4);
+
+  const commitResults = await Promise.allSettled(
+    commitTargets.map(async (repository) => ({
+      repository: repository.name,
+      response: await fetchCommits(TVARA_ACCOUNT, repository.name, signal),
+    })),
+  );
+
+  const commits: GitHubCommit[] = [];
+  for (const [index, result] of commitResults.entries()) {
+    const target = commitTargets[index];
+    const label = target ? `${target.name} commits` : "Tvara commits";
+    if (result.status === "rejected") {
+      warnings.push(toUserMessage(result.reason, label));
+      continue;
+    }
+    try {
+      commits.push(
+        ...parseGitHubCommits(result.value.response.data, result.value.repository),
+      );
+    } catch (error) {
+      warnings.push(toUserMessage(error, label));
+    }
+  }
+
+  const organisationActivity = aggregateCommitsByDay(commits);
+  const organisationCommitTotal = commits.length;
+  const organisationCommitRepositoryCount = commitTargets.length;
+
   const timestamps = [
     profileRaw?.lastUpdated,
     repositoriesRaw?.lastUpdated,
@@ -154,13 +194,13 @@ async function loadGitHubArchive(signal: AbortSignal): Promise<ApiResponse<GitHu
       profile,
       repositories: selectedRepositories,
       organisation,
-      organisationRepositories: selectRepositories(organisationRepositories, 6, {
-        includeForks: false,
-        includeArchived: false,
-      }),
+      organisationRepositories: selectedOrgRepositories,
       languages,
       languageRepositoryCount,
       commits,
+      organisationActivity,
+      organisationCommitTotal,
+      organisationCommitRepositoryCount,
       warnings: [...new Set(warnings)],
       source: "GitHub REST API · unauthenticated",
       lastUpdated: timestamps.length > 0 ? Math.min(...timestamps) : null,

@@ -141,6 +141,11 @@ export interface LeetCodeData {
   mediumSolved: number;
   hardSolved: number;
   activity: LeetCodeActivity[];
+  rank?: number;
+  badges?: number;
+  mostRecentBadge?: string;
+  attempting?: number;
+  totalProblems?: number;
 }
 
 export interface LinkedExperience {

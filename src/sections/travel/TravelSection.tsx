@@ -14,15 +14,19 @@ export function TravelSection() {
     >
       <div className="travel-layout">
         <div className="travel-map">
-          <WorldGrid />
+          <WorldGrid count={travel.locations.length} />
         </div>
         <div className="travel-side">
           {travel.locations.length > 0 ? (
             <ul className="travel-list">
               {travel.locations.map((location) => (
                 <li key={location.id}>
-                  <span className="travel-list__city">{location.city}</span>
-                  <span className="travel-list__country">{location.country}</span>
+                  <span className="travel-list__city">
+                    {location.city === location.country ? location.country : location.city}
+                  </span>
+                  <span className="travel-list__country">
+                    {location.city === location.country ? "VISITED" : location.country}
+                  </span>
                 </li>
               ))}
             </ul>

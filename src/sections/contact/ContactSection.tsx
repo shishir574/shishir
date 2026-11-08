@@ -7,7 +7,8 @@ const LINK_META: Record<string, string> = {
   LinkedIn: "Professional profile",
   LeetCode: "Problem-solving record",
   Tvara: "AI Sales Brain — tvara.global",
-  "Tvara GitHub": "Company repositories",
+  "Tvara GitHub": "Tvara GitHub account (TryTvara)",
+  "Tvara GitHub Org": "Tvara GitHub organisation (tvara-ai)",
 };
 
 export function ContactSection() {
@@ -105,8 +106,12 @@ export function ContactSection() {
               <dd>{identifiers.github}</dd>
             </div>
             <div>
-              <dt>ORGANISATION</dt>
+              <dt>TVARA GITHUB</dt>
               <dd>{identifiers.githubOrganisation}</dd>
+            </div>
+            <div>
+              <dt>TVARA ORG</dt>
+              <dd>{identifiers.tvaraOrg}</dd>
             </div>
             <div>
               <dt>LEETCODE</dt>

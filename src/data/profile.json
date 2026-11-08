@@ -24,12 +24,14 @@
       { "label": "LinkedIn", "url": "https://www.linkedin.com/in/shishir-govinda-m" },
       { "label": "LeetCode", "url": "https://leetcode.com/u/Shishir_Govinda_M/" },
       { "label": "Tvara", "url": "https://tvara.global" },
-      { "label": "Tvara GitHub", "url": "https://github.com/TryTvara" }
+      { "label": "Tvara GitHub", "url": "https://github.com/TryTvara" },
+      { "label": "Tvara GitHub Org", "url": "https://github.com/tvara-ai" }
     ]
   },
   "identifiers": {
     "github": "shishir574",
     "githubOrganisation": "TryTvara",
+    "tvaraOrg": "tvara-ai",
     "linkedin": "shishir-govinda-m",
     "leetcode": "Shishir_Govinda_M",
     "playstation": "ShishirG",

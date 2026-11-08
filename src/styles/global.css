@@ -647,7 +647,7 @@ ol {
 }
 
 .hero__intro {
-  max-width: 44rem;
+  max-width: none;
   margin-top: 1.35rem;
   color: var(--text-muted);
   font-size: clamp(0.98rem, 0.94rem + 0.2vw, 1.12rem);
@@ -1191,7 +1191,7 @@ ol {
 }
 
 .section-head__title {
-  max-width: 24ch;
+  max-width: none;
   margin-top: 0.35rem;
   font-family: var(--font-display);
   font-weight: 600;
@@ -1201,7 +1201,7 @@ ol {
 }
 
 .section-head__description {
-  max-width: 62ch;
+  max-width: none;
   margin-top: 0.9rem;
   color: var(--text-muted);
   font-size: 0.92rem;
@@ -1410,7 +1410,7 @@ ol {
 }
 
 .tvara-brief__description {
-  max-width: 60ch;
+  max-width: none;
   color: var(--text-muted);
   font-size: 0.92rem;
   line-height: 1.7;
@@ -1823,7 +1823,7 @@ ol {
 }
 
 .research-card__summary {
-  max-width: 62ch;
+  max-width: none;
   margin-top: 0.6rem;
   color: var(--text-muted);
   font-size: 0.88rem;
@@ -1898,7 +1898,7 @@ ol {
 
 .projects-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
@@ -2253,7 +2253,7 @@ ol {
 }
 
 .profile__bio {
-  max-width: 58ch;
+  max-width: none;
   margin-top: 0.55rem;
   color: var(--text-muted);
   font-size: 0.85rem;
@@ -2593,7 +2593,7 @@ ol {
 }
 
 .data-state__message {
-  max-width: 70ch;
+  max-width: none;
   margin-top: 0.5rem;
   color: var(--text-muted);
   font-size: 0.82rem;
@@ -2934,6 +2934,14 @@ ol {
   letter-spacing: -0.05em;
 }
 
+.leetcode-stats__sub {
+  margin-top: 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+}
+
 .leetcode-stats__badge {
   display: flex;
   flex-direction: column;
@@ -2945,6 +2953,12 @@ ol {
   font-size: 0.48rem;
   letter-spacing: 0.1em;
   color: var(--text-dim);
+}
+
+.leetcode-meta {
+  margin-top: 0.2rem;
+  padding-top: 0.2rem;
+  border-top: 1px solid var(--border);
 }
 
 .difficulty-list {
@@ -3058,6 +3072,184 @@ ol {
   font-size: 0.54rem;
   letter-spacing: 0.05em;
   color: var(--text-dim);
+}
+
+/* --------------------------------------------------------------------------
+   Contribution heatmap (GitHub green calendar)
+   -------------------------------------------------------------------------- */
+
+.contribution-block {
+  margin-top: 1rem;
+}
+
+.contribution-summary {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.contribution-summary strong {
+  color: var(--text);
+}
+
+.contribution-heatmap-figure {
+  overflow-x: auto;
+  padding: 0.4rem 0 0.2rem;
+}
+
+.contribution-heatmap {
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 26rem;
+}
+
+.contribution-heatmap__months {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+}
+
+.contribution-heatmap__weekday-spacer {
+  width: 2.2rem;
+  flex: none;
+}
+
+.contribution-heatmap__month {
+  width: 10px;
+  flex: none;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.contribution-heatmap__grid {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.contribution-heatmap__weekdays {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 2.2rem;
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  line-height: 1;
+  color: var(--text-dim);
+}
+
+.contribution-heatmap__weekdays span {
+  display: flex;
+  align-items: center;
+  height: 10px;
+}
+
+.contribution-heatmap__weeks {
+  display: flex;
+  gap: 3px;
+}
+
+.contribution-heatmap__week {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.contribution-cell {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: #161b22;
+}
+
+.contribution-cell--l0 {
+  background: #161b22;
+}
+
+.contribution-cell--l1 {
+  background: #0e4429;
+}
+
+.contribution-cell--l2 {
+  background: #006d32;
+}
+
+.contribution-cell--l3 {
+  background: #26a641;
+}
+
+.contribution-cell--l4 {
+  background: #39d353;
+}
+
+.contribution-heatmap__week .contribution-cell:hover {
+  outline: 1px solid var(--text-muted);
+  outline-offset: 0;
+}
+
+.contribution-legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.7rem;
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  color: var(--text-dim);
+}
+
+.contribution-legend .contribution-cell {
+  width: 10px;
+  height: 10px;
+}
+
+.contribution-heatmap__caption {
+  margin-top: 0.7rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+.contribution-foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-top: 0.9rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+}
+
+.contribution-note {
+  margin-top: 0.7rem;
+  padding: 0.8rem;
+  border-left: 2px solid var(--border-strong);
+  background: rgb(255 255 255 / 0.02);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.org__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-top: 0.8rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
 }
 
 /* --------------------------------------------------------------------------
@@ -3213,7 +3405,7 @@ ol {
 
 .music-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+  grid-template-columns: 1fr;
   gap: 1rem;
   align-items: start;
 }
@@ -3268,7 +3460,7 @@ ol {
 
 .music-panel__message {
   margin-top: 1rem;
-  max-width: 65ch;
+  max-width: none;
   color: var(--text-muted);
   font-size: 0.84rem;
   line-height: 1.7;
@@ -3489,7 +3681,7 @@ ol {
 }
 
 .footer__note {
-  max-width: 42ch;
+  max-width: none;
   margin-top: 0.2rem;
   color: var(--text-dim);
   font-size: 0.7rem;

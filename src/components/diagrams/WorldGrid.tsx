@@ -1,4 +1,4 @@
-export function WorldGrid() {
+export function WorldGrid({ count = 0 }: { count?: number }) {
   return (
     <figure className="diagram world-grid">
       <svg
@@ -7,10 +7,10 @@ export function WorldGrid() {
         role="img"
         aria-labelledby="world-title world-desc"
       >
-        <title id="world-title">Travel map awaiting verified locations</title>
+        <title id="world-title">Travel grid</title>
         <desc id="world-desc">
-          An abstract coordinate grid representing the travel map. No country or city markers
-          are shown because no verified travel records have been added.
+          A coordinate grid representing the travel record. {String(count)} countries
+          recorded.
         </desc>
 
         <defs>
@@ -27,7 +27,7 @@ export function WorldGrid() {
             <line key={y} x1="40" y1={y} x2="720" y2={y} />
           ))}
           {[150, 260, 370, 480, 590, 700].map((x) => (
-            <line key={x} x1={x} y1="40" x2={x} y2="370" />
+            <line key={x} x1="40" y1="40" x2={x} y2="370" />
           ))}
           <ellipse cx="380" cy="205" rx="330" ry="150" />
           <ellipse cx="380" cy="205" rx="220" ry="100" />
@@ -40,17 +40,17 @@ export function WorldGrid() {
         </g>
 
         <text x="40" y="30" className="diagram__label">
-          TRAVEL GRID / NO VERIFIED MARKERS
+          TRAVEL GRID
         </text>
         <text x="720" y="30" className="diagram__label diagram__label--end">
-          00 LOCATIONS
+          {String(count).padStart(2, "0")} COUNTR{count === 1 ? "Y" : "IES"}
         </text>
         <text x="380" y="400" className="world-grid__caption-text">
-          DATA PENDING / MAP DOES NOT INVENT VISITS
+          THAILAND · MALAYSIA · NEPAL · UAE
         </text>
       </svg>
       <figcaption className="diagram__caption">
-        Leaflet will render the interactive map once verified location records exist.
+        Country-level record: Thailand, Malaysia, Nepal, UAE.
       </figcaption>
     </figure>
   );

@@ -63,7 +63,10 @@ export function PlayStationSection() {
                 <li key={game.id} className="game-card">
                   <p className="game-card__title">{game.title}</p>
                   <p className="game-card__meta">
-                    {game.platform} / {game.completionPercentage}% COMPLETE
+                    {game.platform} /{" "}
+                    {game.completionPercentage > 0
+                      ? `${String(game.completionPercentage)}% COMPLETE`
+                      : "FAVOURITE"}
                   </p>
                   {game.platinum ? <span className="game-card__platinum">PLATINUM</span> : null}
                 </li>

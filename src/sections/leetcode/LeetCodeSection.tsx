@@ -30,6 +30,14 @@ export function LeetCodeSection() {
             <div>
               <p className="mono-label">TOTAL SOLVED</p>
               <p className="leetcode-stats__total">{formatNumber(total)}</p>
+              {leetcode.totalProblems ? (
+                <p className="leetcode-stats__sub">
+                  of {formatNumber(leetcode.totalProblems)} problems
+                  {typeof leetcode.attempting === "number"
+                    ? ` · ${formatNumber(leetcode.attempting)} attempting`
+                    : ""}
+                </p>
+              ) : null}
             </div>
             <div className="leetcode-stats__badge">
               <Activity size={18} aria-hidden="true" />
@@ -58,6 +66,27 @@ export function LeetCodeSection() {
             })}
           </div>
 
+          <dl className="meta-list leetcode-meta">
+            {typeof leetcode.rank === "number" ? (
+              <div>
+                <dt>RANK</dt>
+                <dd>{formatNumber(leetcode.rank)}</dd>
+              </div>
+            ) : null}
+            {typeof leetcode.badges === "number" ? (
+              <div>
+                <dt>BADGES</dt>
+                <dd>{formatNumber(leetcode.badges)}</dd>
+              </div>
+            ) : null}
+            {leetcode.mostRecentBadge ? (
+              <div>
+                <dt>MOST RECENT</dt>
+                <dd>{leetcode.mostRecentBadge}</dd>
+              </div>
+            ) : null}
+          </dl>
+
           <div className="leetcode-stats__foot">
             <span>LAST UPDATED {formatDate(leetcode.lastUpdated)}</span>
             <ExternalLink href={leetcode.profileUrl} className="text-link">
@@ -75,10 +104,7 @@ export function LeetCodeSection() {
           {leetcode.activity.length > 0 ? (
             <ActivityHeatmap activity={leetcode.activity} />
           ) : (
-            <EmptyState
-              title="NO ACTIVITY YET"
-              message="No activity records yet."
-            />
+            <EmptyState title="NO ACTIVITY YET" message="No activity records yet." />
           )}
         </div>
       </div>

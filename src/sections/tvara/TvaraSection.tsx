@@ -46,6 +46,14 @@ export function TvaraSection() {
               </dd>
             </div>
             <div>
+              <dt>GITHUB ORG</dt>
+              <dd>
+                <ExternalLink href={`https://github.com/${identifiers.tvaraOrg}`}>
+                  {identifiers.tvaraOrg}
+                </ExternalLink>
+              </dd>
+            </div>
+            <div>
               <dt>ROLE</dt>
               <dd>Co-founder &amp; CTO</dd>
             </div>

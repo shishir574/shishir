@@ -2,7 +2,10 @@ import { fetchJson } from "@/lib/api/cache";
 import type { ApiResponse } from "@/lib/api/types";
 
 export const GITHUB_USERNAME = "shishir574";
-export const TVARA_ORGANISATION = "TryTvara";
+/** TryTvara is a normal GitHub user account (type: User), not an organisation. */
+export const TVARA_ACCOUNT = "TryTvara";
+/** Public GitHub organisation for Tvara (linked, not fetched for commits). */
+export const TVARA_ORG = "tvara-ai";
 export const GITHUB_API = "https://api.github.com";
 
 const GITHUB_HEADERS = {
@@ -43,7 +46,8 @@ export function fetchRepositories(
 export function fetchOrganisation(
   signal?: AbortSignal,
 ): Promise<ApiResponse<unknown>> {
-  return fetchJson(`${GITHUB_API}/orgs/${TVARA_ORGANISATION}`, {
+  // TryTvara is a user account, so use /users/... (not /orgs/... which 404s).
+  return fetchJson(`${GITHUB_API}/users/${TVARA_ACCOUNT}`, {
     signal,
     ttlMs: GITHUB_TTL.profile,
     headers: GITHUB_HEADERS,
@@ -54,7 +58,7 @@ export function fetchOrganisationRepositories(
   signal?: AbortSignal,
 ): Promise<ApiResponse<unknown>> {
   return fetchJson(
-    `${GITHUB_API}/orgs/${TVARA_ORGANISATION}/repos?sort=updated&per_page=100`,
+    `${GITHUB_API}/users/${TVARA_ACCOUNT}/repos?type=owner&sort=updated&per_page=100`,
     {
       signal,
       ttlMs: GITHUB_TTL.repositories,
@@ -84,7 +88,7 @@ export function fetchCommits(
   signal?: AbortSignal,
 ): Promise<ApiResponse<unknown>> {
   return fetchJson(
-    `${GITHUB_API}/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repository)}/commits?per_page=20`,
+    `${GITHUB_API}/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repository)}/commits?per_page=100`,
     {
       signal,
       ttlMs: GITHUB_TTL.commits,

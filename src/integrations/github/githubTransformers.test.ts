@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 import {
+  aggregateCommitsByDay,
   aggregateLanguages,
+  contributionLevel,
   languageColor,
   mergeCommits,
   parseGitHubCommit,
@@ -183,5 +185,52 @@ describe("commits", () => {
     );
     const newer = parseGitHubCommit(payload, "two");
     expect(mergeCommits([older, newer]).map((entry) => entry.repository)).toEqual(["two", "one"]);
+  });
+
+  it("aggregates commits by UTC day, sorted ascending", () => {
+    const first = parseGitHubCommit(
+      {
+        ...payload,
+        sha: "aaa0000",
+        commit: { ...payload.commit, author: { ...payload.commit.author, date: "2026-10-01T08:00:00Z" } },
+      },
+      "one",
+    );
+    const second = parseGitHubCommit(
+      {
+        ...payload,
+        sha: "bbb0000",
+        commit: { ...payload.commit, author: { ...payload.commit.author, date: "2026-10-01T22:00:00Z" } },
+      },
+      "one",
+    );
+    const third = parseGitHubCommit(
+      {
+        ...payload,
+        sha: "ccc0000",
+        commit: { ...payload.commit, author: { ...payload.commit.author, date: "2026-09-30T23:30:00Z" } },
+      },
+      "two",
+    );
+    expect(aggregateCommitsByDay([second, first, third])).toEqual([
+      { date: "2026-09-30", count: 1 },
+      { date: "2026-10-01", count: 2 },
+    ]);
+  });
+
+  it("returns no activity for an empty commit list", () => {
+    expect(aggregateCommitsByDay([])).toEqual([]);
+  });
+
+  it("maps counts to green contribution levels", () => {
+    expect(contributionLevel(0)).toBe(0);
+    expect(contributionLevel(1)).toBe(1);
+    expect(contributionLevel(2)).toBe(1);
+    expect(contributionLevel(3)).toBe(2);
+    expect(contributionLevel(5)).toBe(2);
+    expect(contributionLevel(6)).toBe(3);
+    expect(contributionLevel(9)).toBe(3);
+    expect(contributionLevel(10)).toBe(4);
+    expect(contributionLevel(50)).toBe(4);
   });
 });

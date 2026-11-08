@@ -10,6 +10,7 @@ import {
   requiredString,
 } from "@/lib/validation/guards";
 import type {
+  GitHubActivityDay,
   GitHubCommit,
   GitHubOrganisation,
   GitHubProfile,
@@ -246,6 +247,28 @@ export function mergeCommits(commitGroups: GitHubCommit[], limit = 8): GitHubCom
   return [...commitGroups]
     .sort((left, right) => Date.parse(right.date) - Date.parse(left.date))
     .slice(0, limit);
+}
+
+export function aggregateCommitsByDay(commits: GitHubCommit[]): GitHubActivityDay[] {
+  const counts = new Map<string, number>();
+  for (const commit of commits) {
+    const date = commit.date.slice(0, 10);
+    if (date.length !== 10) continue;
+    const parsed = Date.parse(`${date}T00:00:00Z`);
+    if (!Number.isFinite(parsed)) continue;
+    counts.set(date, (counts.get(date) ?? 0) + 1);
+  }
+  return [...counts.entries()]
+    .sort(([left], [right]) => left.localeCompare(right))
+    .map(([date, count]) => ({ date, count }));
+}
+
+export function contributionLevel(count: number): 0 | 1 | 2 | 3 | 4 {
+  if (count <= 0) return 0;
+  if (count <= 2) return 1;
+  if (count <= 5) return 2;
+  if (count <= 9) return 3;
+  return 4;
 }
 
 /** Guards against the API returning an error envelope where an object was expected. */

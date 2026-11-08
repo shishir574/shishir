@@ -10,11 +10,13 @@ import {
 } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 import { LanguageBars } from "@/components/charts/LanguageBars";
+import { ContributionHeatmap } from "@/components/charts/ContributionHeatmap";
 import { EmptyState, ErrorState, LoadingState } from "@/components/status/DataState";
 import { ExternalLink } from "@/components/ui/ExternalLink";
 import { TagList } from "@/components/ui/Panel";
 import { useNearViewport } from "@/hooks/useNearViewport";
 import { useGitHubArchive } from "@/integrations/github/useGitHubArchive";
+import { identifiers } from "@/data";
 import { formatDate, formatRelative } from "@/lib/formatting/date";
 import { formatNumber } from "@/lib/formatting/number";
 import { languageColor } from "@/integrations/github/githubTransformers";
@@ -79,7 +81,7 @@ export function GitHubSection() {
       index="06"
       kicker="BUILDER FILE / LIVE PUBLIC DATA"
       title="The public code record."
-      description="Public repositories from the personal account and the Tvara organisation, sorted by last push, newest first."
+      description="Public repositories from the personal account and the Tvara GitHub account, sorted by last push, newest first."
     >
       <div ref={ref} className="github">
         <div className="source-bar">
@@ -244,14 +246,14 @@ export function GitHubSection() {
 
                 <div className="panel">
                   <div className="panel__head">
-                    <span className="mono-label">TVARA / ORGANISATION</span>
+                    <span className="mono-label">TVARA / GITHUB ACCOUNT</span>
                     <Building2 size={15} aria-hidden="true" />
                   </div>
                   {data?.organisation ? (
                     <div className="org">
                       <img
                         src={data.organisation.avatarUrl}
-                        alt={`${data.organisation.name ?? data.organisation.login} organisation avatar`}
+                        alt={`${data.organisation.name ?? data.organisation.login} GitHub avatar`}
                         width={44}
                         height={44}
                         loading="lazy"
@@ -262,12 +264,12 @@ export function GitHubSection() {
                           {data.organisation.name ?? data.organisation.login}
                         </p>
                         <p className="org__description">
-                          {data.organisation.description ?? "No public description."}
+                          {data.organisation.description ?? data.organisation.blog ?? "No public description."}
                         </p>
                       </div>
                     </div>
                   ) : (
-                    <p className="empty-inline">Organisation record unavailable.</p>
+                    <p className="empty-inline">GitHub account record unavailable.</p>
                   )}
                   {data?.organisationRepositories.length ? (
                     <ul className="org__repos">
@@ -285,10 +287,58 @@ export function GitHubSection() {
                       ))}
                     </ul>
                   ) : (
-                    <p className="empty-inline">No public organisation repositories returned.</p>
+                    <p className="empty-inline">
+                      No public repositories returned for @{identifiers.githubOrganisation}. Its
+                      contribution count on GitHub comes from private repositories.
+                    </p>
                   )}
+                  <div className="org__links">
+                    <ExternalLink href={`https://github.com/${identifiers.githubOrganisation}`}>
+                      @{identifiers.githubOrganisation}
+                    </ExternalLink>
+                    <ExternalLink href={`https://github.com/${identifiers.tvaraOrg}`}>
+                      @{identifiers.tvaraOrg} org
+                    </ExternalLink>
+                  </div>
                 </div>
               </aside>
+            </div>
+
+            <div className="contribution-block panel">
+              <div className="panel__head">
+                <span className="mono-label">TVARA / CONTRIBUTION HISTORY</span>
+                <span className="block-head__note">52 WEEKS · COMMITS · GITHUB CALENDAR</span>
+              </div>
+              {data?.organisation ? (
+                <ContributionHeatmap
+                  activity={data.organisationActivity ?? []}
+                  total={data.organisationCommitTotal ?? 0}
+                  repositoryCount={data.organisationCommitRepositoryCount ?? 0}
+                  owner={data.organisation.login}
+                />
+              ) : (
+                <EmptyState
+                  title="NO COMMIT ACTIVITY RECORDED"
+                  message="No public commit activity was returned for the Tvara GitHub account."
+                />
+              )}
+              <div className="contribution-foot">
+                <ExternalLink href={data?.organisation?.htmlUrl ?? `https://github.com/${identifiers.githubOrganisation}`}>
+                  github.com/{data?.organisation?.login ?? identifiers.githubOrganisation} — view activity
+                </ExternalLink>
+                <ExternalLink href={`https://github.com/${identifiers.tvaraOrg}`}>
+                  github.com/{identifiers.tvaraOrg} (org) — view
+                </ExternalLink>
+              </div>
+              {data?.organisation && data.organisationActivity.length === 0 ? (
+                <p className="contribution-note">
+                  @{data.organisation.login} has no public repositories. Its
+                  contributions on GitHub are from private repositories and
+                  cannot be fetched via the unauthenticated REST API — the calendar
+                  above shows public commit history only. Open the GitHub profile
+                  to view the full graph.
+                </p>
+              ) : null}
             </div>
           </>
         )}
