@@ -1,66 +1,61 @@
 {
   "name": "Tvara",
   "github": "TryTvara",
-  "positioning": "AI and agentic SaaS products for HR, Sales, Finance and Operations.",
-  "description": "Tvara builds AI products and agentic workflows for business functions. The platform supports retrieval-augmented generation, fine-tuning, and deployment in private VPC, self-hosted or cloud environments.",
+  "website": "https://tvara.global",
+  "positioning": "AI Sales Brain for modern sales teams — run your entire sales from one brain.",
+  "description": "Tvara connects your data, matches the right opportunities, and runs your outreach, so every move is guided, not guessed. Four sales engines work as one system: Matching Engine, Intelligent Campaigns, learning from every interaction, and integration with your existing sales stack across Email, WhatsApp and calls.",
   "founders": [
+    {
+      "id": "ruchika-sureka",
+      "name": "Ruchika Sureka",
+      "role": "Founder & CEO",
+      "focus": "Company and product strategy."
+    },
     {
       "id": "shishir-govinda",
       "name": "Shishir Govinda M",
       "role": "Co-founder & CTO",
       "focus": "Product architecture, AI systems and engineering."
-    },
-    {
-      "id": "ruchika-sureka",
-      "name": "Ruchika Sureka",
-      "role": "Co-founder",
-      "focus": "Company and product."
-    },
-    {
-      "id": "shashidhar-hegde",
-      "name": "Shashidhar Hegde",
-      "role": "Co-founder",
-      "focus": "Company and product."
     }
   ],
   "capabilities": [
     {
-      "id": "agentic-workflows",
-      "label": "Agentic workflows",
-      "description": "Task-oriented AI workflows across HR, Sales, Finance and Operations."
+      "id": "matching-engine",
+      "label": "Matching Engine",
+      "description": "Matches every lead to the right offer, message angle and channel — ranking opportunities by fit, intent and readiness before outreach begins."
     },
     {
-      "id": "rag",
-      "label": "Retrieval-augmented generation",
-      "description": "Grounded answers over organisation-specific knowledge."
+      "id": "intelligent-campaigns",
+      "label": "Intelligent Campaigns",
+      "description": "Personalised Email and WhatsApp campaigns where every message and follow-up adapts to buyer context instead of a generic sequence."
     },
     {
-      "id": "fine-tuning",
-      "label": "Fine-tuning",
-      "description": "Adapting models to domain language and business processes."
+      "id": "learning-loop",
+      "label": "Learns from Every Interaction",
+      "description": "Learns from emails, WhatsApp conversations, calls, objections and outcomes to improve pitches, recommendations and follow-ups."
     },
     {
-      "id": "deployment",
-      "label": "Controlled deployment",
-      "description": "Private VPC, self-hosted and cloud options for enterprise constraints."
+      "id": "existing-stack",
+      "label": "Your Existing Sales Stack",
+      "description": "Connects CRM, inbox, WhatsApp, lead sources and business tools — HubSpot, Salesforce, Zoho, Pipedrive, Gmail, Slack and more — without replacing them."
     },
     {
-      "id": "integrations",
-      "label": "System integrations",
-      "description": "Connecting AI workflows to existing operational software."
+      "id": "buyer-profile",
+      "label": "Live Buyer Profile",
+      "description": "Builds a real-time behavioural profile per lead — role, intent stage, objection type and channel preference — then routes, matches and fires."
     },
     {
-      "id": "evaluation",
-      "label": "Evaluation",
-      "description": "Measuring model and workflow quality before and after deployment."
+      "id": "context-layer",
+      "label": "Context Layer Research",
+      "description": "The research behind Tvara: source-aware compression for stateless LLM inference in business workflows, published in Tvara Research."
     }
   ],
   "milestones": [
     {
       "id": "preseed-round",
-      "title": "Pre-seed raised; international scale-up",
+      "title": "Pre-seed funded by Marwari Catalysts",
       "date": "2026-02",
-      "description": "Raised $75,000 in pre-seed funding at a $1M valuation, backed by Marwari Catalysts. Scaled Tvara across 6 countries with 50+ global partners and technical ecosystem support from Google Cloud and AWS.",
+      "description": "Pre-seed funded by Marwari Catalysts.",
       "verification": "verified"
     },
     {
@@ -72,12 +67,9 @@
     }
   ],
   "metrics": [
-    { "id": "preseed", "label": "PRE-SEED RAISED", "value": "$75,000", "verification": "verified" },
-    { "id": "valuation", "label": "VALUATION", "value": "$1M", "verification": "verified" },
-    { "id": "countries", "label": "COUNTRIES", "value": "6", "verification": "verified" },
-    { "id": "partners", "label": "GLOBAL PARTNERS", "value": "50+", "verification": "verified" },
-    { "id": "accelerator", "label": "BACKED BY", "value": "MARWARI CATALYSTS", "verification": "verified" },
-    { "id": "ecosystem", "label": "ECOSYSTEM SUPPORT", "value": "GOOGLE CLOUD · AWS", "verification": "verified" }
+    { "id": "backed-by", "label": "PRE-SEED", "value": "MARWARI CATALYSTS", "verification": "verified" },
+    { "id": "based", "label": "HEADQUARTERS", "value": "BANGALORE, INDIA", "verification": "verified" },
+    { "id": "ecosystem", "label": "ECOSYSTEM", "value": "AWS · GOOGLE CLOUD · NVIDIA", "verification": "verified" }
   ],
-  "disclosureNote": "Funding figures above are published from the founder's résumé. Client counts and other commercial internals remain undisclosed."
+  "disclosureNote": "Pre-seed funded by Marwari Catalysts."
 }

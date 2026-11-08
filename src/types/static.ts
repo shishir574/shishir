@@ -64,6 +64,7 @@ export interface ResearchFile {
 export interface TvaraFile {
   name: string;
   github: string;
+  website?: string;
   positioning: string;
   description: string;
   founders: Founder[];
@@ -76,7 +77,6 @@ export interface TvaraFile {
 export interface EducationFile {
   records: EducationRecord[];
   courses: CourseRecord[];
-  achievements: string[];
 }
 
 export interface ProjectsFile {

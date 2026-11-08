@@ -1,6 +1,6 @@
 # Shishir Govinda — Personal Archive
 
-An interactive, static personal archive: engineer, founder of Tvara, and researcher.
+An interactive, static personal archive: engineer, co-founder of Tvara, and researcher.
 
 Production target: **GitHub Pages**. No backend, database, serverless function, proxy or
 scheduled collector exists anywhere in this project.
@@ -40,7 +40,7 @@ Open the URL printed by Vite (usually `http://localhost:5173`).
 ```text
 src/
 ├── app/             App shell and section registry
-├── components/      Layout, navigation, terminal, charts, diagrams, status, UI
+├── components/      Layout, navigation, terminal, charts, diagrams, UI
 ├── data/            Typed, hand-maintained content (JSON)
 ├── hooks/           Viewport, active-section, clock, accent and resource state
 ├── integrations/
@@ -69,35 +69,30 @@ Rules enforced by the structure:
 The GitHub section fetches public, unauthenticated data directly from
 `https://api.github.com` when the visitor approaches the section:
 
-- personal profile and public repositories;
+- personal profile and public repositories, sorted by last push (newest first);
 - language bytes for up to five selected repositories;
-- Tvara organisation and repositories;
-- recent commits for at most two repositories.
+- Tvara organisation and repositories.
 
 Responses are cached in memory with ETag support where exposed. A stale cached response is
 preferred over an error within the same session. Rate limits are surfaced explicitly.
 
 ### Spotify
 
-The Spotify section is **intentionally gated** in this build. Personal Spotify data is only
-visible to an authorised account, so anonymous visitors are never shown a false "now playing"
-identity. The section documents the planned Authorization Code + PKCE flow and minimum scopes.
-No client secret or token exists in the repository.
+Personal Spotify data is only visible to an authorised account, so anonymous visitors see a
+gated state until an explicit authorisation session is connected. No client secret or token
+exists in the repository.
 
 ### LeetCode, LinkedIn, PlayStation, travel
 
-LinkedIn content is populated from the owner's PDF résumé. LeetCode, PlayStation and travel
-remain empty snapshots until the owner supplies records. No scraping, undocumented endpoints,
-Sony credentials, CORS proxies or synthetic activity generation are used.
+Curated records are maintained in `src/data` and displayed newest-first. No scraping,
+undocumented endpoints, Sony credentials, CORS proxies or synthetic activity generation are
+used.
 
-## Content verification
+## Tvara
 
-Education, professional history, projects, certifications and the three research
-records are verified against the owner's résumé (updated November 2026). Anything that has
-not been checked against a source is marked `pending` and renders a verification badge.
-Research titles, authors, DOIs, benchmarks, academic details, company metrics and personal
-statistics are never invented to fill a layout. To publish another record, edit the relevant
-JSON file and change `verification` to `verified` only after checking the source.
+Company record is aligned with https://tvara.global — AI Sales Brain with Matching Engine,
+Intelligent Campaigns, learning loop and existing-stack integrations. The Context Layer paper
+(20 June 2026) is linked from the Research section.
 
 ## Deployment
 
@@ -124,5 +119,4 @@ interface. The footer exposes a signal-spectrum control to demonstrate token-lev
 - GitHub's unauthenticated rate limit is per visitor IP; heavy browsing can exhaust it.
 - Spotify cannot display the owner's personal data to anonymous visitors.
 - LeetCode and PlayStation have no supported public browser APIs for this use case.
-- Publication bibliographic metadata is supplied; DOIs, PDFs and benchmarks are not published until the source documents are provided.
-- The travel map waits for verified coordinates and photographs before Leaflet is introduced.
+- The travel map waits for coordinates and photographs before Leaflet is introduced.

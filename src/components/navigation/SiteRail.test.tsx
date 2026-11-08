@@ -16,7 +16,9 @@ describe("SiteRail", () => {
 
   it("renders the persistent archive metadata", () => {
     render(<SiteRail active="home" />);
-    expect(screen.getByText("BUILD", { exact: true })).toBeInTheDocument();
+    expect(screen.getByText("LAST UPDATED", { exact: true })).toBeInTheDocument();
+    expect(screen.queryByText("BUILD", { exact: true })).not.toBeInTheDocument();
+    expect(screen.queryByText("SOURCE", { exact: true })).not.toBeInTheDocument();
     expect(screen.getByText(/github\.com\/shishir574/i)).toBeInTheDocument();
   });
 });

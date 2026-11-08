@@ -2,14 +2,14 @@
   "identifier": "shishir-govinda-m",
   "profileUrl": "https://www.linkedin.com/in/shishir-govinda-m",
   "headline": "Co-founder & CTO, Tvara | BE CSE, SVMIT (VTU) '26 | AI, C++, CUDA",
-  "about": "Co-founder and CTO of Tvara, building agentic AI and RAG systems for enterprise workflows across 6 countries. Previously a contract Software Architect with the Department of EDCS, Government of Karnataka. Raised $75K pre-seed at a $1M valuation with Marwari Catalysts.",
+  "about": "Co-founder and CTO of Tvara, building agentic AI and RAG systems for enterprise workflows. Previously a contract Software Architect with the Department of EDCS, Government of Karnataka. Pre-seed funded by Marwari Catalysts.",
   "lastUpdated": "2026-11-08",
   "experience": [
     {
       "id": "tvara-cto",
       "organization": "Tvara",
       "position": "Co-Founder & CTO",
-      "description": "Raised $75,000 in pre-seed funding at a $1M valuation, backed by Marwari Catalysts; scaled Tvara across 6 countries with 50+ global partners and technical ecosystem support from Google Cloud and AWS. Led architecture of production AI systems combining LLMs, RAG, agentic workflows and external APIs, including persona- and profile-aware retrieval for context-sensitive enterprise reasoning. Directed technical strategy across AI infrastructure, integrations and enterprise deployments with CXOs and engineering teams.",
+      "description": "Pre-seed funded by Marwari Catalysts. Led architecture of production AI systems combining LLMs, RAG, agentic workflows and external APIs, including persona- and profile-aware retrieval for context-sensitive enterprise reasoning. Directed technical strategy across AI infrastructure, integrations and enterprise deployments with CXOs and engineering teams.",
       "startDate": "2025-12",
       "location": "Bengaluru, India"
     },
@@ -32,14 +32,6 @@
       "location": "Denver, USA"
     },
     {
-      "id": "ea-forage",
-      "organization": "Electronic Arts (Forage)",
-      "position": "Virtual Software Engineer",
-      "description": "Proposed and prototyped a feature for The Sims 4 allowing players to record real-life voice or music as in-game songs. Patched a bug fix and optimised the Sims 4 codebase by implementing improved C++ vectors instead of arrays.",
-      "startDate": "2024-06",
-      "endDate": "2024-06"
-    },
-    {
       "id": "techhub-secretary",
       "organization": "TechHub SVMIT (College Technical Club)",
       "position": "Secretary",
@@ -47,6 +39,14 @@
       "startDate": "2024-09",
       "endDate": "2026-08",
       "location": "Bengaluru, India"
+    },
+    {
+      "id": "ea-forage",
+      "organization": "Electronic Arts (Forage)",
+      "position": "Virtual Software Engineer",
+      "description": "Proposed and prototyped a feature for The Sims 4 allowing players to record real-life voice or music as in-game songs. Patched a bug fix and optimised the Sims 4 codebase by implementing improved C++ vectors instead of arrays.",
+      "startDate": "2024-06",
+      "endDate": "2024-06"
     },
     {
       "id": "techhub-dsa-mentor",
@@ -69,7 +69,7 @@
       "endDate": "2026",
       "gpa": "9.05/10.0",
       "verification": "verified",
-      "notes": ["Recorded from the owner's résumé."]
+      "notes": []
     }
   ],
   "skills": [
@@ -187,5 +187,5 @@
     }
   ],
   "posts": [],
-  "verificationNote": "Populated from the owner's PDF résumé. LinkedIn is linked as a public profile only; nothing is scraped."
+  "verificationNote": ""
 }

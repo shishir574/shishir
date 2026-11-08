@@ -12,7 +12,7 @@
       "GPU-accelerated algorithms",
       "Product architecture"
     ],
-    "locationNote": "Location is read from the live GitHub record, never hardcoded.",
+    "locationNote": "",
     "contact": {
       "email": "shishirgovinda11@gmail.com",
       "phone": "+91 98451 02188",
@@ -23,6 +23,7 @@
       { "label": "GitHub", "url": "https://github.com/shishir574" },
       { "label": "LinkedIn", "url": "https://www.linkedin.com/in/shishir-govinda-m" },
       { "label": "LeetCode", "url": "https://leetcode.com/u/Shishir_Govinda_M/" },
+      { "label": "Tvara", "url": "https://tvara.global" },
       { "label": "Tvara GitHub", "url": "https://github.com/TryTvara" }
     ]
   },

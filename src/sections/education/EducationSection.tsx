@@ -1,7 +1,6 @@
 import { Award, GraduationCap, ScrollText } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 import { EmptyState } from "@/components/status/DataState";
-import { StatusDot } from "@/components/ui/StatusDot";
 import { education, linkedin } from "@/data";
 import { formatMonthYear } from "@/lib/formatting/date";
 
@@ -11,10 +10,10 @@ export function EducationSection() {
       id="education"
       index="07"
       kicker="ACADEMIC RECORD"
-      title="Academic record, verified from the résumé."
-      description="Degree, dates, GPA and coursework are recorded from the owner's résumé. Subject marks are not itemised there and are not inferred."
+      title="Education."
+      description="Degree, coursework and certifications."
     >
-      <div className="education-layout">
+      <div className="education-layout education-layout--stacked">
         <div className="education-records">
           {education.records.map((record) => (
             <article key={record.id} className="education-card panel">
@@ -27,11 +26,6 @@ export function EducationSection() {
                   <h3 className="education-card__degree">{record.degree}</h3>
                   <p className="education-card__institution">{record.institution}</p>
                 </div>
-                {record.verification === "verified" ? (
-                  <StatusDot tone="live" label="VERIFIED RECORD" />
-                ) : (
-                  <StatusDot tone="warning" label="PENDING VERIFICATION" />
-                )}
               </div>
 
               <dl className="meta-list meta-list--grid">
@@ -54,24 +48,18 @@ export function EducationSection() {
                   <dd>{record.gpa ?? "—"}</dd>
                 </div>
               </dl>
-
-              <ul className="education-card__notes">
-                {record.notes.map((note) => (
-                  <li key={note}>{note}</li>
-                ))}
-              </ul>
             </article>
           ))}
 
           {education.records.length === 0 ? (
             <EmptyState
               title="NO ACADEMIC RECORDS"
-              message="Education records have not been added yet."
+              message="No academic records yet."
             />
           ) : null}
         </div>
 
-        <aside className="education-aside">
+        <div className="education-panels">
           <div className="panel">
             <div className="panel__head">
               <span className="mono-label">COURSEWORK</span>
@@ -84,10 +72,7 @@ export function EducationSection() {
                 ))}
               </ul>
             ) : (
-              <p className="empty-inline">
-                No verified course records. Subject marks will not be approximated or generated
-                to fill a chart.
-              </p>
+              <p className="empty-inline">No course records.</p>
             )}
           </div>
 
@@ -112,31 +97,7 @@ export function EducationSection() {
               <p className="empty-inline">No certification records.</p>
             )}
           </div>
-
-          <div className="panel">
-            <div className="panel__head">
-              <span className="mono-label">SUBJECT PERFORMANCE</span>
-            </div>
-            <div className="chart-placeholder" role="img" aria-label="Subject performance chart pending verified marks">
-              <span className="chart-placeholder__line" />
-              <span className="chart-placeholder__line" />
-              <span className="chart-placeholder__line" />
-              <span className="chart-placeholder__line" />
-              <p>AWAITING VERIFIED COURSEWORK</p>
-            </div>
-          </div>
-
-          {education.achievements.length > 0 ? (
-            <div className="panel">
-              <p className="mono-label">ACHIEVEMENTS</p>
-              <ul>
-                {education.achievements.map((achievement) => (
-                  <li key={achievement}>{achievement}</li>
-                ))}
-              </ul>
-            </div>
-          ) : null}
-        </aside>
+        </div>
       </div>
     </Section>
   );

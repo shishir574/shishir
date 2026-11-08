@@ -7,11 +7,11 @@ export function TvaraArchitecture() {
         role="img"
         aria-labelledby="tvara-arch-title tvara-arch-desc"
       >
-        <title id="tvara-arch-title">Tvara platform architecture schematic</title>
+        <title id="tvara-arch-title">Tvara AI Sales Brain schematic</title>
         <desc id="tvara-arch-desc">
-          A conceptual, public-safe schematic with four layers: business workflows, agentic
-          orchestration, a grounded context layer, and deployment inside cloud, private VPC or
-          self-hosted environments. It omits internal implementation details.
+          Four sales engines as one sales brain: matching engine, intelligent campaigns,
+          learning from every interaction, and connection to your existing sales stack
+          across Email, WhatsApp and calls.
         </desc>
 
         <defs>
@@ -24,18 +24,18 @@ export function TvaraArchitecture() {
         <rect x="20" y="20" width="720" height="420" className="diagram__frame" />
 
         <text x="40" y="54" className="diagram__label">
-          TVARA / PUBLIC ARCHITECTURE SCHEMATIC
+          TVARA / AI SALES BRAIN
         </text>
         <text x="720" y="54" className="diagram__label diagram__label--end">
-          REV 01
+          TVARA.GLOBAL
         </text>
 
         <g className="arch-layer">
           <rect x="40" y="76" width="680" height="72" />
           <text x="56" y="104" className="diagram__label">
-            LAYER 01 / BUSINESS WORKFLOWS
+            LAYER 01 / SALES ENGINES
           </text>
-          {["HR", "SALES", "FINANCE", "OPERATIONS"].map((label, index) => (
+          {["MATCHING ENGINE", "CAMPAIGNS", "LEARNING LOOP", "EXISTING STACK"].map((label, index) => (
             <g key={label} className="arch-node">
               <rect x={56 + index * 163} y="114" width="145" height="22" />
               <text x={128 + index * 163} y="129" className="arch-node__text">
@@ -51,9 +51,9 @@ export function TvaraArchitecture() {
         <g className="arch-layer">
           <rect x="40" y="186" width="680" height="82" />
           <text x="56" y="212" className="diagram__label">
-            LAYER 02 / AGENTIC ORCHESTRATION
+            LAYER 02 / DECISION LAYER
           </text>
-          {["TASK ROUTING", "TOOL USE", "EVALUATION", "GUARDRAILS"].map((label, index) => (
+          {["BEST-FIT OFFER", "MESSAGE ANGLE", "PRIORITY", "CHANNEL"].map((label, index) => (
             <g key={label} className="arch-node arch-node--accent">
               <rect x={56 + index * 163} y="224" width="145" height="28" />
               <text x={128 + index * 163} y="242" className="arch-node__text">
@@ -69,9 +69,9 @@ export function TvaraArchitecture() {
         <g className="arch-layer">
           <rect x="40" y="306" width="680" height="72" />
           <text x="56" y="332" className="diagram__label">
-            LAYER 03 / CONTEXT + MODELS
+            LAYER 03 / EXECUTION
           </text>
-          {["RAG / VECTOR CONTEXT", "FINE-TUNED MODELS", "INTEGRATIONS", "OBSERVABILITY"].map(
+          {["EMAIL", "WHATSAPP", "CALLS", "CRM SYNC"].map(
             (label, index) => (
               <g key={label} className="arch-node">
                 <rect x={56 + index * 163} y="344" width="145" height="22" />
@@ -86,15 +86,15 @@ export function TvaraArchitecture() {
         <g className="arch-deployment">
           <rect x="40" y="394" width="680" height="32" />
           <text x="56" y="414" className="diagram__label">
-            DEPLOYMENT BOUNDARY
+            OUTCOME
           </text>
           <text x="300" y="414" className="arch-deployment__text">
-            CLOUD / PRIVATE VPC / SELF-HOSTED
+            MATCHED ACTION · LEARNS EVERY DAY
           </text>
         </g>
       </svg>
       <figcaption className="diagram__caption">
-        Public-safe schematic. Internal implementation details are intentionally omitted.
+        Four sales engines, one Sales Brain — tvara.global
       </figcaption>
     </figure>
   );

@@ -3,7 +3,6 @@ import {
   Building2,
   CalendarDays,
   ExternalLink as ExternalLinkIcon,
-  GitCommitHorizontal,
   MapPin,
   RefreshCw,
   Star,
@@ -13,7 +12,6 @@ import { Section } from "@/components/layout/Section";
 import { LanguageBars } from "@/components/charts/LanguageBars";
 import { EmptyState, ErrorState, LoadingState } from "@/components/status/DataState";
 import { ExternalLink } from "@/components/ui/ExternalLink";
-import { StatusDot } from "@/components/ui/StatusDot";
 import { TagList } from "@/components/ui/Panel";
 import { useNearViewport } from "@/hooks/useNearViewport";
 import { useGitHubArchive } from "@/integrations/github/useGitHubArchive";
@@ -70,24 +68,6 @@ export function GitHubSection() {
   const archive = useGitHubArchive(inView);
   const data = archive.data;
 
-  const statusTone = archive.error
-    ? "offline"
-    : archive.loading
-      ? "warning"
-      : data
-        ? "live"
-        : "idle";
-
-  const statusLabel = archive.error
-    ? "DEGRADED"
-    : archive.loading
-      ? "CONNECTING"
-      : data
-        ? data.warnings.length > 0
-          ? "PARTIAL"
-          : "LIVE / PUBLIC"
-        : "ON DEMAND";
-
   const lastUpdated = useMemo(
     () => (archive.lastUpdated ? formatRelative(archive.lastUpdated) : "—"),
     [archive.lastUpdated],
@@ -99,19 +79,15 @@ export function GitHubSection() {
       index="06"
       kicker="BUILDER FILE / LIVE PUBLIC DATA"
       title="The public code record."
-      description="Fetched directly from the GitHub REST API by this browser, without authentication or a proxy. The personal account and the Tvara organisation are kept separate because organisation activity may include other contributors."
+      description="Public repositories from the personal account and the Tvara organisation, sorted by last push, newest first."
     >
       <div ref={ref} className="github">
         <div className="source-bar">
-          <StatusDot tone={statusTone} label={statusLabel} />
           <span className="source-bar__item">
             SOURCE <strong>{data?.source ?? "api.github.com"}</strong>
           </span>
           <span className="source-bar__item">
             CACHED <strong>{lastUpdated}</strong>
-          </span>
-          <span className="source-bar__item source-bar__item--optional">
-            AUTH <strong>NONE</strong>
           </span>
           <button
             type="button"
@@ -311,49 +287,8 @@ export function GitHubSection() {
                   ) : (
                     <p className="empty-inline">No public organisation repositories returned.</p>
                   )}
-                  <p className="org__note">
-                    Organisation commits may include work by multiple people and are not
-                    presented as personal activity.
-                  </p>
                 </div>
               </aside>
-            </div>
-
-            <div className="commit-block">
-              <div className="block-head">
-                <p className="mono-label">RECENT COMMITS / FEATURED REPOSITORIES</p>
-                <p className="block-head__note">MAX 2 REPOSITORIES / PUBLIC METADATA</p>
-              </div>
-              {data && data.commits.length > 0 ? (
-                <ul className="commit-list">
-                  {data.commits.map((commit) => (
-                    <li key={`${commit.repository}-${commit.sha}`} className="commit">
-                      <GitCommitHorizontal size={15} aria-hidden="true" />
-                      <div className="commit__body">
-                        <a
-                          href={commit.htmlUrl}
-                          target="_blank"
-                          rel="noreferrer noopener"
-                          className="commit__message"
-                        >
-                          {commit.message}
-                        </a>
-                        <p className="commit__meta">
-                          <span>{commit.repository}</span>
-                          <span>{commit.shortSha}</span>
-                          {commit.authorLogin ? <span>@{commit.authorLogin}</span> : null}
-                          <span>{formatRelative(commit.date)}</span>
-                        </p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <EmptyState
-                  title="NO COMMIT METADATA"
-                  message="Commit activity could not be read for the selected repositories."
-                />
-              )}
             </div>
           </>
         )}

@@ -1,7 +1,6 @@
 import { Building2, Code2, FlaskConical } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 import { dimensions } from "@/data";
-import { StatusDot } from "@/components/ui/StatusDot";
 
 const ICONS = {
   builder: Code2,
@@ -16,7 +15,7 @@ export function AboutSection() {
       index="01"
       kicker="IDENTITY / THREE DIMENSIONS"
       title="One record, three operating modes."
-      description="The archive is organised around how the work is made: systems built, a company run, and research tested. Personal interests sit alongside them as part of the same record, not as decoration."
+      description="The archive is organised around how the work is made: systems built, a company run, and research tested."
     >
       <div className="dimension-grid">
         {dimensions.map((dimension) => {
@@ -36,36 +35,6 @@ export function AboutSection() {
             </article>
           );
         })}
-      </div>
-
-      <div className="protocol">
-        <div className="protocol__head">
-          <p className="mono-label">ARCHIVE PROTOCOL</p>
-          <StatusDot tone="live" label="STATIC-FIRST" />
-        </div>
-        <div className="protocol__grid">
-          <div>
-            <h3 className="protocol__title">CURATED CONTENT</h3>
-            <p>
-              Identity, research, company and personal records live in typed local data.
-              Nothing is invented to fill a layout.
-            </p>
-          </div>
-          <div>
-            <h3 className="protocol__title">LIVE PUBLIC DATA</h3>
-            <p>
-              GitHub is fetched directly by the browser. Every integration has a loading,
-              empty, stale and unavailable state.
-            </p>
-          </div>
-          <div>
-            <h3 className="protocol__title">NO HIDDEN LAYER</h3>
-            <p>
-              No backend, database, proxy or scheduled collector. The production artefact is
-              HTML, CSS, JavaScript and assets.
-            </p>
-          </div>
-        </div>
       </div>
     </Section>
   );

@@ -2,7 +2,6 @@ import { ArrowUp } from "lucide-react";
 import { ACCENT_MODES, type AccentMode } from "@/hooks/useAccentMode";
 import { identifiers, identity } from "@/data";
 import { ExternalLink } from "@/components/ui/ExternalLink";
-import { StatusDot } from "@/components/ui/StatusDot";
 
 export function SiteFooter({
   accent,
@@ -21,7 +20,7 @@ export function SiteFooter({
           <div>
             <p className="footer__name">{identity.name}</p>
             <p className="footer__note">
-              Static archive. Public data only. No analytics, cookies or visitor accounts.
+              Engineer. Founder. Researcher.
             </p>
           </div>
         </div>
@@ -55,7 +54,6 @@ export function SiteFooter({
             </div>
           </fieldset>
           <p className="footer__meta">
-            <StatusDot tone="idle" label="ARCHIVE ONLINE" />
             <span>v0.1.0</span>
             <span>{identifiers.repository}</span>
           </p>

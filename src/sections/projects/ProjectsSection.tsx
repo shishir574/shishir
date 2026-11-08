@@ -1,16 +1,8 @@
-import { Boxes, GitBranch, LayoutTemplate, SquareTerminal } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 import { EmptyState } from "@/components/status/DataState";
 import { TagList } from "@/components/ui/Panel";
 import { projects } from "@/data";
 import { formatMonthYear } from "@/lib/formatting/date";
-
-const PROJECT_FIELDS = [
-  { icon: SquareTerminal, label: "PROBLEM", text: "What the system had to solve, stated plainly." },
-  { icon: GitBranch, label: "APPROACH", text: "Architecture, trade-offs and the engineering path." },
-  { icon: Boxes, label: "STACK", text: "Languages, frameworks and infrastructure actually used." },
-  { icon: LayoutTemplate, label: "RESULT", text: "Verified outcomes, repository and demo links." },
-];
 
 export function ProjectsSection() {
   return (
@@ -18,8 +10,8 @@ export function ProjectsSection() {
       id="projects"
       index="04"
       kicker="BUILDER FILE / SELECTED WORK"
-      title="Projects with receipts."
-      description="Academic and individual projects from the résumé, with the actual stack used. Repository links are not listed in the résumé, so none are linked here; live repository activity is shown in the GitHub file."
+      title="Projects."
+      description="Selected builds and technical work, newest first."
     >
       <div className="projects-layout">
         <div className="projects-empty">
@@ -52,29 +44,8 @@ export function ProjectsSection() {
               ))}
             </ul>
           ) : (
-            <EmptyState title="NO VERIFIED PROJECT RECORDS" message={projects.note} />
+            <EmptyState title="NO PROJECT RECORDS" message="No project records yet." />
           )}
-        </div>
-        <div className="project-schema">
-          <p className="mono-label">RECORD SCHEMA</p>
-          <ul>
-            {PROJECT_FIELDS.map((field) => {
-              const Icon = field.icon;
-              return (
-                <li key={field.label}>
-                  <Icon size={16} aria-hidden="true" />
-                  <div>
-                    <p className="project-schema__label">{field.label}</p>
-                    <p className="project-schema__text">{field.text}</p>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-          <p className="project-schema__note">
-            Untagged GitHub activity belongs in the live GitHub record. Forks are never
-            presented as original work.
-          </p>
         </div>
       </div>
     </Section>

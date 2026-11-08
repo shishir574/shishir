@@ -2,9 +2,8 @@ import { BriefcaseBusiness } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 import { EmptyState } from "@/components/status/DataState";
 import { ExternalLink } from "@/components/ui/ExternalLink";
-import { StatusDot } from "@/components/ui/StatusDot";
 import { linkedin } from "@/data";
-import { formatDate, formatMonthYear } from "@/lib/formatting/date";
+import { formatMonthYear } from "@/lib/formatting/date";
 
 function LinkedInIcon({ size = 16 }: { size?: number }) {
   return (
@@ -26,9 +25,9 @@ export function ExperienceSection() {
     <Section
       id="experience"
       index="08"
-      kicker="PROFESSIONAL FILE / LOCALLY MAINTAINED"
-      title="Professional history, without the scrape."
-      description="Experience entries are maintained in the repository and published only after confirmation. LinkedIn is linked as a profile, never scraped or treated as an API."
+      kicker="PROFESSIONAL FILE"
+      title="Experience."
+      description="Professional history, newest first."
     >
       <div className="experience-layout">
         <div className="experience-main">
@@ -50,10 +49,7 @@ export function ExperienceSection() {
               ))}
             </ol>
           ) : (
-            <EmptyState
-              title="NO VERIFIED EXPERIENCE ENTRIES"
-              message="Professional entries are empty in the local record. The founder operating record is available now in the Tvara file."
-            >
+            <EmptyState title="NO EXPERIENCE ENTRIES" message="No experience entries yet.">
               <a href="#tvara" className="text-link">
                 OPEN TVARA RECORD <span aria-hidden="true">→</span>
               </a>
@@ -62,7 +58,7 @@ export function ExperienceSection() {
 
           {linkedin.awards.length > 0 ? (
             <div className="recognition">
-              <p className="mono-label">RECOGNITION / SELECTED</p>
+              <p className="mono-label">RECOGNITION</p>
               <ul className="recognition-list">
                 {linkedin.awards.map((award) => (
                   <li key={award.id} className="recognition-item">
@@ -84,33 +80,15 @@ export function ExperienceSection() {
 
         <aside className="experience-aside panel">
           <div className="panel__head">
-            <span className="mono-label">LINKEDIN / SOURCE POLICY</span>
+            <span className="mono-label">LINKEDIN</span>
             <LinkedInIcon size={16} />
           </div>
           <p className="experience-aside__headline">{linkedin.headline}</p>
           <p className="experience-aside__about">{linkedin.about}</p>
-          <dl className="meta-list">
-            <div>
-              <dt>LAST REVIEWED</dt>
-              <dd>
-                <StatusDot tone="warning" showLabel={false} />
-                {formatDate(linkedin.lastUpdated)}
-              </dd>
-            </div>
-            <div>
-              <dt>ENTRIES</dt>
-              <dd>{String(linkedin.experience.length).padStart(2, "0")}</dd>
-            </div>
-            <div>
-              <dt>METHOD</dt>
-              <dd>MANUAL / CONFIRMED</dd>
-            </div>
-          </dl>
           <ExternalLink href={linkedin.profileUrl} className="button button--small">
             <BriefcaseBusiness size={14} aria-hidden="true" />
             PUBLIC PROFILE
           </ExternalLink>
-          <p className="experience-aside__note">{linkedin.verificationNote}</p>
         </aside>
       </div>
     </Section>

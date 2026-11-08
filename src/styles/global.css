@@ -676,7 +676,7 @@ ol {
 
 .hero__console {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.5fr);
+  grid-template-columns: 1fr;
   gap: 1rem;
   margin-top: clamp(1rem, 0.5rem + 2vw, 2rem);
 }
@@ -1745,7 +1745,7 @@ ol {
 
 .research-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.5fr);
+  grid-template-columns: 1fr;
   gap: clamp(1.5rem, 1rem + 3vw, 3.5rem);
 }
 
@@ -2652,7 +2652,19 @@ ol {
 
 .education-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.6fr);
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.education-layout--stacked {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.education-panels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   align-items: start;
 }
@@ -3799,6 +3811,7 @@ ol {
   .engineering-layout,
   .github-grid,
   .education-layout,
+  .education-panels,
   .experience-layout,
   .leetcode-layout,
   .playstation-layout,

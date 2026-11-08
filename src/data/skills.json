@@ -1,5 +1,5 @@
 {
-  "note": "Skill groups describe areas of work, not proficiency scores. GitHub language percentages are shown separately and do not measure expertise.",
+  "note": "",
   "categories": [
     {
       "id": "ai-ml",
@@ -55,12 +55,6 @@
         "Cesium Maps",
         "Multi-user editing"
       ]
-    },
-    {
-      "id": "gpu",
-      "label": "GPU / performance",
-      "description": "Parallel computing and performance-oriented engineering.",
-      "items": ["CUDA", "Parallel algorithms", "A* search", "Dijkstra", "Profiling", "Benchmarking"]
     },
     {
       "id": "product",

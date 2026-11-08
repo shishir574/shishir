@@ -1,4 +1,4 @@
-import { Building2, ShieldCheck } from "lucide-react";
+import { Building2, Globe } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 import { TvaraArchitecture } from "@/components/diagrams/TvaraArchitecture";
 import { ExternalLink } from "@/components/ui/ExternalLink";
@@ -12,7 +12,7 @@ export function TvaraSection() {
       id="tvara"
       index="02"
       kicker="FOUNDER FILE / OPERATING COMPANY"
-      title="Tvara — AI systems for how businesses actually run."
+      title="Tvara — AI Sales Brain."
       description={tvara.positioning}
     >
       <div className="tvara-layout">
@@ -28,6 +28,16 @@ export function TvaraSection() {
               <dd>{tvara.name}</dd>
             </div>
             <div>
+              <dt>WEBSITE</dt>
+              <dd>
+                {tvara.website ? (
+                  <ExternalLink href={tvara.website}>{tvara.website.replace(/^https?:\/\//, "")}</ExternalLink>
+                ) : (
+                  "—"
+                )}
+              </dd>
+            </div>
+            <div>
               <dt>GITHUB</dt>
               <dd>
                 <ExternalLink href={`https://github.com/${identifiers.githubOrganisation}`}>
@@ -40,13 +50,18 @@ export function TvaraSection() {
               <dd>Co-founder &amp; CTO</dd>
             </div>
             <div>
-              <dt>DISCLOSURE</dt>
-              <dd>Public-safe record</dd>
+              <dt>STATUS</dt>
+              <dd>{tvara.disclosureNote}</dd>
             </div>
           </dl>
           <div className="tvara-brief__note">
-            <ShieldCheck size={15} aria-hidden="true" />
-            <p>{tvara.disclosureNote}</p>
+            <Globe size={15} aria-hidden="true" />
+            <p>
+              <ExternalLink href={tvara.website ?? "https://tvara.global"}>
+                Visit tvara.global
+              </ExternalLink>{" "}
+              — Matching Engine, Intelligent Campaigns, Research and pricing.
+            </p>
           </div>
         </div>
 
@@ -73,10 +88,10 @@ export function TvaraSection() {
       <div className="capability-block">
         <div className="block-head">
           <p className="mono-label">COMPANY MILESTONES</p>
-          <p className="block-head__note">FROM THE FOUNDER&apos;S RÉSUMÉ</p>
+          <p className="block-head__note">TVARA.GLOBAL</p>
         </div>
         {tvara.metrics.length > 0 ? (
-          <div className="metric-strip" role="list" aria-label="Tvara funding metrics">
+          <div className="metric-strip" role="list" aria-label="Tvara at a glance">
             {tvara.metrics.map((metric) => (
               <div key={metric.id} className="metric" role="listitem">
                 <p className="metric__value">{metric.value}</p>
@@ -103,7 +118,7 @@ export function TvaraSection() {
       <div className="capability-block">
         <div className="block-head">
           <p className="mono-label">CAPABILITY MAP</p>
-          <p className="block-head__note">CAPABILITIES, NOT METRICS</p>
+          <p className="block-head__note">FOUR SALES ENGINES, ONE BRAIN</p>
         </div>
         <div className="capability-grid">
           {tvara.capabilities.map((capability, index) => (
@@ -122,19 +137,18 @@ export function TvaraSection() {
           <p className="mono-label">STACK SURFACE</p>
           <TagList
             items={[
-              "Agentic AI",
-              "RAG",
-              "Fine-tuning",
-              "Private VPC",
-              "Self-hosted",
-              "Cloud",
-              "Enterprise integrations",
+              "Matching Engine",
+              "Intelligent Campaigns",
+              "Email",
+              "WhatsApp",
+              "Calls",
+              "CRM + Lead Sources",
             ]}
             ariaLabel="Tvara technology surface"
           />
           <p className="tvara-stack__note">
-            This diagram is a public-safe schematic. It deliberately omits internal
-            implementation detail, customer configurations and commercial figures.
+            CRMs store. Campaign tools send. Tvara decides — best offer, message angle,
+            priority and channel, with a feedback loop from every reply.
           </p>
         </div>
       </div>

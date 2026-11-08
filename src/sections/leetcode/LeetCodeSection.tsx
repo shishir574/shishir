@@ -21,8 +21,8 @@ export function LeetCodeSection() {
       id="leetcode"
       index="09"
       kicker="PERSONAL FILE / PROBLEM SOLVING"
-      title="A local problem-solving snapshot."
-      description="LeetCode has no supported browser API, so this record is maintained locally. It is a verified snapshot with an explicit date — never a live claim, and never filled with synthetic activity."
+      title="LeetCode."
+      description="Problem-solving record."
     >
       <div className="leetcode-layout">
         <div className="leetcode-stats panel">
@@ -33,7 +33,7 @@ export function LeetCodeSection() {
             </div>
             <div className="leetcode-stats__badge">
               <Activity size={18} aria-hidden="true" />
-              <span>SNAPSHOT</span>
+              <span>RECORD</span>
             </div>
           </div>
 
@@ -59,7 +59,7 @@ export function LeetCodeSection() {
           </div>
 
           <div className="leetcode-stats__foot">
-            <span>LAST REVIEWED {formatDate(leetcode.lastUpdated)}</span>
+            <span>LAST UPDATED {formatDate(leetcode.lastUpdated)}</span>
             <ExternalLink href={leetcode.profileUrl} className="text-link">
               <ExternalLinkIcon size={13} aria-hidden="true" />
               {leetcode.username}
@@ -69,21 +69,17 @@ export function LeetCodeSection() {
 
         <div className="leetcode-activity panel">
           <div className="panel__head">
-            <span className="mono-label">ACTIVITY / DATED RECORDS</span>
+            <span className="mono-label">ACTIVITY</span>
             <CircleCheck size={15} aria-hidden="true" />
           </div>
           {leetcode.activity.length > 0 ? (
             <ActivityHeatmap activity={leetcode.activity} />
           ) : (
             <EmptyState
-              title="NO DATED ACTIVITY"
-              message="No dated problem-solving records have been stored. The heatmap is not generated from an estimate."
+              title="NO ACTIVITY YET"
+              message="No activity records yet."
             />
           )}
-          <p className="leetcode-activity__note">
-            Counts are imported from the owner&apos;s own record. The page does not call
-            undocumented LeetCode endpoints or route requests through a proxy.
-          </p>
         </div>
       </div>
     </Section>

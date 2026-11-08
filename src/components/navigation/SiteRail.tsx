@@ -1,6 +1,7 @@
 import { sections } from "@/app/routes";
-import { identifiers, identity } from "@/data";
+import { identifiers, identity, linkedin } from "@/data";
 import { useUtcClock } from "@/hooks/useUtcClock";
+import { formatDate } from "@/lib/formatting/date";
 
 function GithubIcon({ size = 15 }: { size?: number }) {
   return (
@@ -62,12 +63,8 @@ export function SiteRail({ active }: { active: string }) {
             <dd>{clock}</dd>
           </div>
           <div>
-            <dt>BUILD</dt>
-            <dd>v0.1.0 / STATIC</dd>
-          </div>
-          <div>
-            <dt>SOURCE</dt>
-            <dd>GIT / PAGES</dd>
+            <dt>LAST UPDATED</dt>
+            <dd>{formatDate(linkedin.lastUpdated)}</dd>
           </div>
           <div>
             <dt>EMAIL</dt>

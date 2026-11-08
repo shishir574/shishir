@@ -1,7 +1,7 @@
 const NODES = [
   { id: "ai", label: "AI / ML", x: 120, y: 90 },
   { id: "sys", label: "SYSTEMS", x: 440, y: 90 },
-  { id: "gpu", label: "GPU", x: 110, y: 330 },
+  { id: "game", label: "GAMES", x: 110, y: 330 },
   { id: "product", label: "PRODUCT", x: 450, y: 330 },
 ];
 
@@ -17,8 +17,7 @@ export function SkillMap() {
         <title id="skill-map-title">Engineering skill relationship map</title>
         <desc id="skill-map-desc">
           A conceptual map connecting four engineering domains — AI and machine learning,
-          systems, GPU computing and product — through a central archive node. It shows
-          relationships between domains, not proficiency scores.
+          systems, game engineering and product — through a central archive node.
         </desc>
 
         <g className="skill-map__connections">
@@ -54,9 +53,6 @@ export function SkillMap() {
 
         <text x="18" y="18" className="diagram__label">
           RELATIONSHIP MAP / DOMAIN LEVEL
-        </text>
-        <text x="18" y="404" className="diagram__label">
-          NOT A PROFICIENCY SCORE
         </text>
       </svg>
     </figure>

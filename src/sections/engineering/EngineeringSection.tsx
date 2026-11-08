@@ -1,4 +1,4 @@
-import { Braces, Cpu, DatabaseZap, Gamepad2, Workflow } from "lucide-react";
+import { Braces, Cpu, Gamepad2, Workflow } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 import { SkillMap } from "@/components/diagrams/SkillMap";
 import { TagList } from "@/components/ui/Panel";
@@ -8,7 +8,6 @@ const ICONS = {
   "ai-ml": Cpu,
   engineering: Braces,
   "game-engineering": Gamepad2,
-  gpu: DatabaseZap,
   product: Workflow,
 } as const;
 
@@ -18,8 +17,8 @@ export function EngineeringSection() {
       id="engineering"
       index="05"
       kicker="BUILDER FILE / SKILL MAP"
-      title="A map of the work, not a scoreboard."
-      description="Skill groups describe the domains this archive covers. They are not self-assigned percentages. Repository language bytes are shown in the GitHub record as a separate, explicitly limited measurement."
+      title="Engineering."
+      description="Skill areas across AI systems, engineering, game development and product."
     >
       <div className="engineering-layout">
         <div className="skill-map-wrap">
@@ -43,11 +42,6 @@ export function EngineeringSection() {
             );
           })}
         </div>
-      </div>
-
-      <div className="engineering-note panel">
-        <p className="mono-label">MEASUREMENT POLICY</p>
-        <p>{skills.note}</p>
       </div>
     </Section>
   );

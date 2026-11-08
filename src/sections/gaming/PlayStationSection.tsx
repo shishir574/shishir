@@ -1,7 +1,6 @@
 import { Gamepad2, Trophy } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 import { EmptyState } from "@/components/status/DataState";
-import { StatusDot } from "@/components/ui/StatusDot";
 import { playstation } from "@/data";
 import { formatDate } from "@/lib/formatting/date";
 import { formatNumber } from "@/lib/formatting/number";
@@ -19,8 +18,8 @@ export function PlayStationSection() {
       id="gaming"
       index="10"
       kicker="PERSONAL FILE / PLAYSTATION"
-      title="Trophy cabinet, offline by design."
-      description="Trophy data is locally maintained. Sony has no supported public browser API for this use case, so no credentials, cookies or private endpoints are involved."
+      title="PlayStation."
+      description="Game library and trophy record."
     >
       <div className="playstation-layout">
         <div className="psn-card panel">
@@ -35,7 +34,6 @@ export function PlayStationSection() {
                 TROPHY LEVEL <strong>{formatNumber(playstation.trophyLevel)}</strong>
               </p>
             </div>
-            <StatusDot tone="warning" label="LOCAL DATA" />
           </div>
 
           <div className="trophy-grid">
@@ -49,14 +47,14 @@ export function PlayStationSection() {
           </div>
 
           <div className="psn-card__foot">
-            <span>LAST REVIEWED {formatDate(playstation.lastUpdated)}</span>
+            <span>LAST UPDATED {formatDate(playstation.lastUpdated)}</span>
             <span>{formatNumber(playstation.totalTrophies)} TOTAL</span>
           </div>
         </div>
 
         <div className="psn-library panel">
           <div className="panel__head">
-            <span className="mono-label">GAME LIBRARY / PLATINUM CABINET</span>
+            <span className="mono-label">GAME LIBRARY</span>
             <Gamepad2 size={15} aria-hidden="true" />
           </div>
           {playstation.games.length > 0 ? (
@@ -73,11 +71,10 @@ export function PlayStationSection() {
             </ul>
           ) : (
             <EmptyState
-              title="NO VERIFIED TROPHY RECORDS"
-              message="Game and trophy records are intentionally empty. Counts displayed above are placeholders, not verified statistics."
+              title="NO GAME RECORDS"
+              message="No game records yet."
             />
           )}
-          <p className="psn-library__note">{playstation.verificationNote}</p>
         </div>
       </div>
     </Section>

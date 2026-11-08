@@ -10,10 +10,7 @@
       "endDate": "2026",
       "gpa": "9.05/10.0",
       "verification": "verified",
-      "notes": [
-        "Recorded from the owner's résumé.",
-        "Coursework years and subject marks are not itemised in the résumé and are not inferred."
-      ]
+      "notes": []
     }
   ],
   "courses": [
@@ -28,8 +25,5 @@
     { "id": "aws", "name": "AWS", "category": "Cloud / DevOps", "academicYear": "2022–2026", "technologies": ["AWS"], "relatedProjects": [] },
     { "id": "computer-organisation", "name": "Computer Organisation", "category": "CS Core", "academicYear": "2022–2026", "technologies": [], "relatedProjects": [] },
     { "id": "git-github", "name": "Git and GitHub", "category": "Cloud / DevOps", "academicYear": "2022–2026", "technologies": ["Git", "GitHub"], "relatedProjects": [] }
-  ],
-  "achievements": [
-    "1 of 7 students to score 100/100 among a batch of 850+ students across three semesters, in four subjects: CAED, DSA, Major Project and Socio Connect Responsibility."
   ]
 }

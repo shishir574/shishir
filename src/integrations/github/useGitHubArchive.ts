@@ -2,7 +2,6 @@ import { useMemo } from "react";
 import { useApiResource, type ResourceState } from "@/hooks/useApiResource";
 import { toUserMessage, type ApiResponse } from "@/lib/api/types";
 import {
-  fetchCommits,
   fetchLanguages,
   fetchOrganisation,
   fetchOrganisationRepositories,
@@ -12,20 +11,16 @@ import {
 } from "./githubClient";
 import {
   aggregateLanguages,
-  mergeCommits,
-  parseGitHubCommits,
   parseGitHubOrganisation,
   parseGitHubProfile,
   parseGitHubRepositories,
   parseLanguageMap,
-  selectCommitTargets,
   selectLanguageTargets,
   selectRepositories,
   type RepositoryLanguageData,
 } from "./githubTransformers";
 import type {
   GitHubArchive,
-  GitHubCommit,
   GitHubOrganisation,
   GitHubProfile,
   GitHubRepository,
@@ -113,7 +108,6 @@ async function loadGitHubArchive(signal: AbortSignal): Promise<ApiResponse<GitHu
     includeArchived: false,
   });
   const languageTargets = selectLanguageTargets(selectedRepositories, 5);
-  const commitTargets = selectCommitTargets(selectedRepositories, 2);
 
   const languageResults = await Promise.allSettled(
     languageTargets.map(async (repository) => ({
@@ -142,32 +136,8 @@ async function loadGitHubArchive(signal: AbortSignal): Promise<ApiResponse<GitHu
     }
   }
 
-  const commitResults = await Promise.allSettled(
-    commitTargets.map(async (repository) => ({
-      repository: repository.name,
-      response: await fetchCommits(GITHUB_USERNAME, repository.name, signal),
-    })),
-  );
-
-  const commitGroups: GitHubCommit[] = [];
-  for (const [index, result] of commitResults.entries()) {
-    const target = commitTargets[index];
-    const label = target ? `${target.name} commits` : "GitHub commits";
-    if (result.status === "rejected") {
-      warnings.push(toUserMessage(result.reason, label));
-      continue;
-    }
-    try {
-      commitGroups.push(
-        ...parseGitHubCommits(result.value.response.data, result.value.repository),
-      );
-    } catch (error) {
-      warnings.push(toUserMessage(error, label));
-    }
-  }
-
   const languages: LanguageSlice[] = aggregateLanguages(languageEntries);
-  const commits = mergeCommits(commitGroups, 8);
+  const commits: [] = [];
   const timestamps = [
     profileRaw?.lastUpdated,
     repositoriesRaw?.lastUpdated,

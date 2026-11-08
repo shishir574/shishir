@@ -6,6 +6,7 @@ const LINK_META: Record<string, string> = {
   GitHub: "Code, repositories and public activity",
   LinkedIn: "Professional profile",
   LeetCode: "Problem-solving record",
+  Tvara: "AI Sales Brain — tvara.global",
   "Tvara GitHub": "Company repositories",
 };
 
@@ -15,8 +16,8 @@ export function ContactSection() {
       id="contact"
       index="13"
       kicker="EXTERNAL PROFILES"
-      title="The public endpoints."
-      description="No contact form, no visitor accounts and no tracking. These are the public profiles that belong to this archive; nothing is invented where an account does not exist."
+      title="Contact."
+      description="Public profiles and contact points."
     >
       <div className="contact-layout">
         <ul className="contact-links">
@@ -120,10 +121,6 @@ export function ContactSection() {
               <dd>{identifiers.repository}</dd>
             </div>
           </dl>
-          <p className="contact-aside__note">
-            Built as a static client-side archive. Hosted on GitHub Pages. Public APIs are called
-            directly by the visitor&apos;s browser.
-          </p>
         </aside>
       </div>
     </Section>
