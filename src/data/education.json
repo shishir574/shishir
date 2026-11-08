@@ -1,0 +1,29 @@
+{
+  "records": [
+    {
+      "id": "btech-cse",
+      "institution": "Sir M Visvesvaraya Institute of Technology",
+      "degree": "Bachelor of Engineering in Computer Science",
+      "department": "Computer Science",
+      "affiliation": "Visvesvaraya Technological University (VTU)",
+      "startDate": "2022",
+      "endDate": "2026",
+      "gpa": "9.05/10.0",
+      "verification": "verified",
+      "notes": []
+    }
+  ],
+  "courses": [
+    { "id": "c-plus-plus", "name": "C++", "category": "Programming", "academicYear": "2022–2026", "technologies": ["C++"], "relatedProjects": [] },
+    { "id": "machine-learning", "name": "Machine Learning", "category": "AI / ML", "academicYear": "2022–2026", "technologies": ["ML"], "relatedProjects": [] },
+    { "id": "python", "name": "Python", "category": "Programming", "academicYear": "2022–2026", "technologies": ["Python"], "relatedProjects": [] },
+    { "id": "data-structures", "name": "Data Structures", "category": "CS Core", "academicYear": "2022–2026", "technologies": [], "relatedProjects": [] },
+    { "id": "operating-systems", "name": "Operating Systems", "category": "CS Core", "academicYear": "2022–2026", "technologies": [], "relatedProjects": [] },
+    { "id": "mysql", "name": "MySQL", "category": "Databases", "academicYear": "2022–2026", "technologies": ["MySQL"], "relatedProjects": [] },
+    { "id": "devops", "name": "DevOps", "category": "Cloud / DevOps", "academicYear": "2022–2026", "technologies": ["DevOps"], "relatedProjects": [] },
+    { "id": "google-cloud", "name": "Google Cloud", "category": "Cloud / DevOps", "academicYear": "2022–2026", "technologies": ["Google Cloud"], "relatedProjects": [] },
+    { "id": "aws", "name": "AWS", "category": "Cloud / DevOps", "academicYear": "2022–2026", "technologies": ["AWS"], "relatedProjects": [] },
+    { "id": "computer-organisation", "name": "Computer Organisation", "category": "CS Core", "academicYear": "2022–2026", "technologies": [], "relatedProjects": [] },
+    { "id": "git-github", "name": "Git and GitHub", "category": "Cloud / DevOps", "academicYear": "2022–2026", "technologies": ["Git", "GitHub"], "relatedProjects": [] }
+  ]
+}

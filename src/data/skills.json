@@ -1,0 +1,72 @@
+{
+  "note": "",
+  "categories": [
+    {
+      "id": "ai-ml",
+      "label": "AI / ML",
+      "description": "Learning systems, language models and applied research.",
+      "items": [
+        "Machine learning",
+        "Deep learning",
+        "Transformers",
+        "Large language models",
+        "RAG",
+        "Fine-tuning",
+        "LoRA",
+        "Agentic AI",
+        "Vector databases",
+        "Model evaluation",
+        "Inference optimisation"
+      ]
+    },
+    {
+      "id": "engineering",
+      "label": "Engineering",
+      "description": "Fundamentals and systems architecture.",
+      "items": [
+        "C++",
+        "Python",
+        "Data structures",
+        "Algorithms",
+        "Operating systems",
+        "SQL / MySQL",
+        "Computer networks",
+        "Databases",
+        "Distributed systems",
+        "Cloud infrastructure",
+        "DevOps",
+        "Google Cloud",
+        "AWS",
+        "Git & GitHub",
+        "System design",
+        "Software architecture"
+      ]
+    },
+    {
+      "id": "game-engineering",
+      "label": "Game engineering",
+      "description": "Realtime 3D engines and gameplay systems.",
+      "items": [
+        "Unreal Engine",
+        "Blueprints",
+        "C++ gameplay",
+        "OpenGL",
+        "SDL",
+        "Cesium Maps",
+        "Multi-user editing"
+      ]
+    },
+    {
+      "id": "product",
+      "label": "Product",
+      "description": "Turning technical systems into shipped products.",
+      "items": [
+        "Product architecture",
+        "Technical leadership",
+        "API design",
+        "Enterprise deployment",
+        "Evaluation design"
+      ]
+    }
+  ]
+}

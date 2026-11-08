@@ -1,0 +1,44 @@
+{
+  "records": [
+    {
+      "id": "tvara-context-layer",
+      "title": "The Context Layer: Source-Aware Compression for Stateless LLM Inference",
+      "shortTitle": "CONTEXT LAYER",
+      "authors": ["Shishir Govinda M"],
+      "venue": "Tvara Research",
+      "publicationDate": "2026-06",
+      "abstract": "Proposes a context-management layer between fragmented business data and stateless LLM inference that retrieves, classifies, ranks, compresses and structures task-specific context using provenance, recency, persistence, permissions, relevance and token cost.",
+      "summary": "Proposed a context-management layer between fragmented business data and stateless LLM inference that retrieves, classifies, ranks, compresses and structures task-specific context using provenance, recency, persistence, permissions, relevance and token cost. Evaluation is defined across groundedness, source attribution, hallucination rate, consistency, latency, token efficiency and actionability, with ablations isolating metadata, recency, persistence, structure, compression and redundancy.",
+      "topics": ["context-layer", "llm-inference", "rag", "agentic-ai", "evaluation"],
+      "paperUrl": "https://storage.googleapis.com/meta-bucket-tvara/research/Tvara_Context_Layer.pdf",
+      "verification": "verified",
+      "recordNote": "Tvara Research, Volume 1 · Issue 1. Published 20 June 2026."
+    },
+    {
+      "id": "rase",
+      "title": "RASE: Retrieval Augmented Story Engine — Narration Control in Game Using AI",
+      "shortTitle": "RASE",
+      "authors": ["Shishir Govinda M", "N. Chaitra", "Shiva Keerthi M. P.", "Rohit Mesta"],
+      "venue": "International Journal of Innovative Research in Technology · Vol. 12 · pp. 3539–3553",
+      "publicationDate": "2025-09",
+      "abstract": "Designed a context-aware narrative architecture combining vectorized game knowledge, retrieval, LLM generation, persistent narrative state and Supervised Fine-Tuning to adapt stories to player actions while preserving developer constraints. Evaluation protocol covers narrative coherence, contextual relevance, engagement and system performance.",
+      "summary": "Designed a context-aware narrative architecture combining vectorized game knowledge, retrieval, LLM generation, persistent narrative state and Supervised Fine-Tuning to adapt stories to player actions while preserving developer constraints. Evaluation protocol covers narrative coherence, contextual relevance, engagement and system performance, with analysis of persistent state, retrieval latency, scalability, designer control and user-study validation.",
+      "topics": ["retrieval-augmented-generation", "narrative-ai", "game-ai", "ai", "fine-tuning"],
+      "verification": "verified",
+      "recordNote": "International Journal of Innovative Research in Technology, Vol. 12, pp. 3539–3553."
+    },
+    {
+      "id": "cuda-pathfinding",
+      "title": "A* and Dijkstra's Algorithm Simultaneously on NVIDIA GPU Using CUDA C++",
+      "shortTitle": "CUDA PATHFINDING",
+      "authors": ["Shishir Govinda M", "T. V. S"],
+      "venue": "International Journal of Innovative Research in Technology · Vol. 11 · pp. 236–244",
+      "publicationDate": "2025-01",
+      "abstract": "Implemented a bidirectional A*–Dijkstra pathfinding system in CUDA, benchmarking 10K–56.25M nodes across varying obstacle densities and movement directions with scalability analysis via Amdahl's Law and GPU memory constraints.",
+      "summary": "Implemented a bidirectional A*–Dijkstra pathfinding system in CUDA, redesigning CPU data structures for GPU execution and benchmarking 10K–56.25M nodes across varying obstacle densities and movement directions. Reports approximately 1500× lower measured execution time at peak under 30% obstacles and 4-direction movement, with scalability analysis via Amdahl's Law, GPU memory, 1D data layouts and CPU–GPU transfer constraints.",
+      "topics": ["cuda", "gpu", "pathfinding", "a-star", "dijkstra", "benchmarking"],
+      "verification": "verified",
+      "recordNote": "International Journal of Innovative Research in Technology, Vol. 11, pp. 236–244."
+    }
+  ]
+}

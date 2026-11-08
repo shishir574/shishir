@@ -1,9 +1,31 @@
-<!-- BEGIN:nextjs-agent-rules -->
+# Agent notes — Shishir Personal Archive
 
-## This is NOT the Next.js you know
+## Product constraints (non-negotiable)
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+- Static site only: React + TypeScript + Vite → `dist/` → GitHub Pages.
+- No backend, API routes, serverless functions, databases, CORS proxies or scheduled jobs.
+- No secrets or private tokens in the repository or frontend bundle.
+- Curated content lives in `src/data/*.json`, typed through `src/types`.
+- Never invent personal, academic, research, company or trophy data. Use explicit
+  `verification: "pending"` / placeholder states instead.
+- Live API consistency: client → transformers → hook → UI. No `fetch()` in components.
 
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+## Commands
 
-<!-- END:nextjs-agent-rules -->
+```bash
+npm run dev        # Vite dev server
+npm run build      # tsc --noEmit && vite build
+npm run lint
+npm run test:ci
+npm run verify     # all of the above
+```
+
+## Conventions
+
+- Strict TypeScript, no `any`, no non-null assertions without a proven invariant.
+- Design tokens live in `src/styles/tokens.css`; accent modes are token overrides.
+- Use `Section` for page sections, `ExternalLink` for external anchors and `DataState`
+  components for loading/error/empty states.
+- Respect `prefers-reduced-motion` and keyboard access.
+- API payloads are untrusted: validate shapes in `githubTransformers.ts` (or equivalent).
+- Update the README when an integration limitation or deployment detail changes.

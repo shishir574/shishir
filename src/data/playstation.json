@@ -1,0 +1,38 @@
+{
+  "onlineId": "ShishirG",
+  "profileUrl": "https://psnprofiles.com/ShishirG",
+  "lastUpdated": "2026-11-08",
+  "trophyLevel": 243,
+  "totalTrophies": 1197,
+  "platinumCount": 19,
+  "goldCount": 103,
+  "silverCount": 213,
+  "bronzeCount": 862,
+  "games": [
+    {
+      "id": "witcher-3-wild-hunt",
+      "title": "The Witcher 3: Wild Hunt",
+      "platform": "PS4",
+      "completionPercentage": 0,
+      "trophies": { "platinum": 0, "gold": 0, "silver": 0, "bronze": 0 },
+      "platinum": false
+    },
+    {
+      "id": "red-dead-redemption-2",
+      "title": "Red Dead Redemption 2",
+      "platform": "PS4",
+      "completionPercentage": 0,
+      "trophies": { "platinum": 0, "gold": 0, "silver": 0, "bronze": 0 },
+      "platinum": false
+    },
+    {
+      "id": "the-last-of-us-part-ii",
+      "title": "The Last of Us Part II",
+      "platform": "PS4",
+      "completionPercentage": 0,
+      "trophies": { "platinum": 0, "gold": 0, "silver": 0, "bronze": 0 },
+      "platinum": false
+    }
+  ],
+  "verificationNote": ""
+}

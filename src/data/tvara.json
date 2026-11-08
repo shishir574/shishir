@@ -1,0 +1,75 @@
+{
+  "name": "Tvara",
+  "github": "TryTvara",
+  "website": "https://tvara.global",
+  "positioning": "AI Sales Brain for modern sales teams — run your entire sales from one brain.",
+  "description": "Tvara connects your data, matches the right opportunities, and runs your outreach, so every move is guided, not guessed. Four sales engines work as one system: Matching Engine, Intelligent Campaigns, learning from every interaction, and integration with your existing sales stack across Email, WhatsApp and calls.",
+  "founders": [
+    {
+      "id": "ruchika-sureka",
+      "name": "Ruchika Sureka",
+      "role": "Founder & CEO",
+      "focus": "Company and product strategy."
+    },
+    {
+      "id": "shishir-govinda",
+      "name": "Shishir Govinda M",
+      "role": "Co-founder & CTO",
+      "focus": "Product architecture, AI systems and engineering."
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "matching-engine",
+      "label": "Matching Engine",
+      "description": "Matches every lead to the right offer, message angle and channel — ranking opportunities by fit, intent and readiness before outreach begins."
+    },
+    {
+      "id": "intelligent-campaigns",
+      "label": "Intelligent Campaigns",
+      "description": "Personalised Email and WhatsApp campaigns where every message and follow-up adapts to buyer context instead of a generic sequence."
+    },
+    {
+      "id": "learning-loop",
+      "label": "Learns from Every Interaction",
+      "description": "Learns from emails, WhatsApp conversations, calls, objections and outcomes to improve pitches, recommendations and follow-ups."
+    },
+    {
+      "id": "existing-stack",
+      "label": "Your Existing Sales Stack",
+      "description": "Connects CRM, inbox, WhatsApp, lead sources and business tools — HubSpot, Salesforce, Zoho, Pipedrive, Gmail, Slack and more — without replacing them."
+    },
+    {
+      "id": "buyer-profile",
+      "label": "Live Buyer Profile",
+      "description": "Builds a real-time behavioural profile per lead — role, intent stage, objection type and channel preference — then routes, matches and fires."
+    },
+    {
+      "id": "context-layer",
+      "label": "Context Layer Research",
+      "description": "The research behind Tvara: source-aware compression for stateless LLM inference in business workflows, published in Tvara Research."
+    }
+  ],
+  "milestones": [
+    {
+      "id": "preseed-round",
+      "title": "Pre-seed funded by Marwari Catalysts",
+      "date": "2026-02",
+      "description": "Pre-seed funded by Marwari Catalysts.",
+      "verification": "verified"
+    },
+    {
+      "id": "startup-exchange",
+      "title": "Tvara — Startup Exchange, Dubai",
+      "date": "2026-02",
+      "description": "Invited to represent Tvara at an exclusive startup exchange, presenting its AI platform and technology roadmap to founders and ecosystem stakeholders.",
+      "verification": "verified"
+    }
+  ],
+  "metrics": [
+    { "id": "backed-by", "label": "PRE-SEED", "value": "MARWARI CATALYSTS", "verification": "verified" },
+    { "id": "based", "label": "HEADQUARTERS", "value": "BANGALORE, INDIA", "verification": "verified" },
+    { "id": "ecosystem", "label": "ECOSYSTEM", "value": "AWS · GOOGLE CLOUD · NVIDIA", "verification": "verified" }
+  ],
+  "disclosureNote": "Pre-seed funded by Marwari Catalysts."
+}
